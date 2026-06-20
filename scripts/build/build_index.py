@@ -45,6 +45,8 @@ def _flatten(fm: dict) -> dict:
         "url": fm.get("url"),
         "image": fm.get("image"),
         "source": fm.get("source"),
+        "verification": fm.get("x_verification"),
+        "confidence": fm.get("x_confidence"),
     }
 
 

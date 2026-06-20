@@ -1,14 +1,16 @@
 {
-  "generated_at": "2026-06-20T23:49:49+09:00",
-  "total_active": 7,
+  "generated_at": "2026-06-21T00:36:51+09:00",
+  "total_active": 10,
   "archived": 0,
   "by_source": {
     "tourapi": 3,
+    "websearch": 3,
     "example": 1,
     "kopis": 3
   },
   "freshness": {
     "tourapi": "2026-06-20T23:37:23+09:00",
+    "websearch": "2026-06-21T00:32:56+09:00",
     "example": "2026-06-20T03:11:00+09:00",
     "kopis": "2026-06-20T23:37:23+09:00"
   }

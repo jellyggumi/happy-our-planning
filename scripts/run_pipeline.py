@@ -9,7 +9,7 @@ from __future__ import annotations
 import subprocess
 import sys
 
-from scripts.build import build_index, wiki_index
+from scripts.build import build_index, build_sqlite, wiki_index
 from scripts.common.config import ROOT
 from scripts.normalize import to_okf
 
@@ -27,9 +27,16 @@ def main(argv: list[str]) -> int:
     print("== 3. 인덱스 빌드 ==")
     build_index.build()
 
-    print("== 4. 지식 wiki 갱신 ==")
+    print("== 4. SQLite(libSQL) 쿼리 인덱스 빌드 ==")
+    try:
+        build_sqlite.build()
+    except RuntimeError as exc:
+        print(f"  SQLite 건너뜀: {exc}")
+
+    print("== 5. 지식 wiki 갱신 ==")
     wiki_index.build()
-    print("완료. 정적 사이트: web/public/ (data/*.json 갱신됨)")
+    print("완료. 정적 사이트: web/public/ (data/*.json, events.db 갱신됨)")
+    return 0
     return 0
 
 

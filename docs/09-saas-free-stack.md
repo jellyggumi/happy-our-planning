@@ -5,7 +5,7 @@ okf_type: TechnicalDocument
 updated: 2026-06-20
 ---
 
-# 09. 무료 SaaS 스택 (월 0원 목표)
+# 09. 무료 SaaS 스택 (월 0원 목표 · 2026 갱신)
 
 ## 1. 채택 스택과 무료 근거
 | 영역 | 서비스 | 무료 한도(개략) | 역할 |
@@ -14,9 +14,11 @@ updated: 2026-06-20
 | 스케줄/CI | **GitHub Actions** | public repo 무료 분 | 수집·빌드·알람 cron |
 | 코드/지식 저장 | **GitHub repo (git)** | 무료 | SSOT 파일 DB |
 | 엣지 함수 | **Cloudflare Workers** | 10만 req/일 | AI 프록시·구독·잡 큐 |
-| KV/DB | **Cloudflare KV / D1** | free tier | 구독·잡·캐시 |
-| LLM | **Gemini API free / Groq free** | 일/분 한도 | AI 추천 플래닝 |
-| 지오코딩/지도 | **VWorld / OSM** | 무료 키 | 좌표·타일 |
+| 쿼리 DB | **Cloudflare D1 / Turso(libSQL)** | free tier | SQLite 인덱스(`events.db`) 엣지 질의 |
+| KV/캐시 | **Cloudflare KV** | free tier | 구독·잡·캐시 |
+| 웹 검색 발견 | **Exa / Brave Search / Tavily** | Exa 1k·Brave 2k·Tavily 1k /월 | 신규·모집형 행사 발견(`config/search.yaml`) |
+| LLM | **Google AI Studio(Gemini) free** / Groq free | 일/분 한도 | AI 추천 플래닝(구조화 JSON) |
+| 지오코딩/지도 | **VWorld / OSM(Leaflet)** | 무료 키 | 좌표·타일·시도 경계 |
 | 공공데이터 | **KOPIS·TourAPI·data.go.kr** | 무료 키 | 행사 데이터 |
 | 알람 | **Telegram Bot / Web Push(VAPID)** | 무료 | 통지 |
 
@@ -26,9 +28,9 @@ updated: 2026-06-20
 - 모든 한도 임계치를 `config/limits.yaml`에 명시, 초과 시 graceful degrade(규칙 추천/배치 지연).
 
 ## 3. 시크릿 관리
-- GitHub Actions Secrets: `KOPIS_KEY, TOURAPI_KEY, DATAGOKR_KEY, VWORLD_KEY, TELEGRAM_TOKEN`.
-- Cloudflare Workers Secrets: `GEMINI_KEY/GROQ_KEY, VAPID_*`.
-- 저장소엔 키 미커밋. `.env.example`만 제공.
+- GitHub Actions Secrets: `KOPIS_KEY, TOURAPI_KEY, DATAGOKR_KEY, VWORLD_KEY, TELEGRAM_TOKEN, EXA_API_KEY, BRAVE_API_KEY, TAVILY_API_KEY`.
+- Cloudflare Workers Secrets: `GOOGLE_AI_STUDIO_KEY`(또는 `GEMINI_KEY`)`/GROQ_KEY, VAPID_*`.
+- 저장소엔 키 미커밋. `.env.example`만 제공(웹검색·Gemini 키 포함).
 
 ## 4. 대안/마이그레이션 여지
 - Pages 대신 GitHub Pages/Vercel, Workers 대신 Deno Deploy, KV 대신 Supabase free.

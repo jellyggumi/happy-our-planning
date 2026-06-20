@@ -62,6 +62,20 @@ def all_regions() -> list[dict]:
     return _load("regions.yaml").get("regions", [])
 
 
+def extract_sido(text: str | None) -> str | None:
+    """자유 텍스트(검색 제목/요약)에서 시/도를 1개 추출. 표준명 우선, 그다음 별칭/접두."""
+    if not text:
+        return None
+    by_name, aliases = _regions_index()
+    for canon in by_name:  # 표준 전체명이 본문에 그대로 있으면 최우선
+        if canon in text:
+            return canon
+    for alias, canon in aliases.items():
+        if alias in text:
+            return canon
+    return None
+
+
 # ---- themes ------------------------------------------------------------------
 
 def map_theme(source: str, code: str | None) -> str | None:
@@ -131,3 +145,16 @@ def source(key: str) -> dict | None:
         if s.get("key") == key:
             return s
     return None
+
+
+# ---- web search (discovery) --------------------------------------------------
+
+def search_config() -> dict:
+    """config/search.yaml — 웹 검색 제공자/질의/신뢰도 가드."""
+    return _load("search.yaml")
+
+
+def search_provider(name: str | None = None) -> dict:
+    cfg = search_config()
+    name = name or cfg.get("default_provider")
+    return (cfg.get("providers", {}) or {}).get(name or "", {})

@@ -20,6 +20,14 @@ sources:
     endpoints:
       festival: "/searchFestival2?eventStartDate={start}&numOfRows=100&pageNo={page}&MobileOS=ETC&MobileApp=hop&_type=json"
     map_profile: tourapi
+  - key: websearch
+    enabled: true
+    # 웹 검색 API(Exa/Brave/Tavily) 기반 "행사 발견" 어댑터.
+    # 제공자/질의는 config/search.yaml 에 선언. 키 없으면 offline 픽스처로 동작.
+    provider: exa            # search.yaml.providers 중 택1 (exa|brave|tavily)
+    format: json
+    rate_limit_per_day: 1000
+    map_profile: websearch
 
   - key: datagokr
     enabled: false   # 엔드포인트별 키/스키마 등록 후 활성화

@@ -26,6 +26,20 @@ updated: 2026-06-20
 | 공모전/대외활동(예: 정부24, 청년정책 onyouth) | 신청형 행사(나이대·자격) | 매크로 대상과 강결합 |
 | 문화비축전·박물관·도서관 공개 일정 | 전시/교육 | iCal/RSS 우선 |
 
+## 2.5 웹 검색 발견 레이어 (Exa · Brave · Tavily) — 무료 티어
+
+공공 API가 색인하지 않는 신규·모집형 행사를 **웹 검색 API**로 발견한다(상세 11 문서).
+
+| 제공자 | 특징 | 무료 한도 | 키 |
+|---|---|---|---|
+| **Exa** | 의미(neural) 검색 + 본문 요약 | 월 1,000 | `EXA_API_KEY` |
+| **Brave Search** | 독립 인덱스, 프라이버시 | 월 2,000 | `BRAVE_API_KEY` |
+| **Tavily** | LLM/RAG 친화 검색 | 월 1,000 | `TAVILY_API_KEY` |
+
+- 선언: `config/search.yaml`(제공자·질의·`min_confidence`·신뢰 도메인).
+- 어댑터: `scripts/ingest/websearch.py` — 제공자 응답을 공통 hit으로 정규화한 뒤
+  날짜·지역·신뢰도 가드를 통과한 것만 OKF 후보(`x_verification: web-discovered`)로 적재.
+- 키 없으면 `raw/websearch/sample-*.json` 픽스처로 오프라인 동작.
 ## 3. 지오코딩(좌표 보강) — 무료
 - **VWorld**(국토부) 지오코더 API: 무료 서비스키, 국내 주소 정확. 1차 채택.
 - 대안: Nominatim(OpenStreetMap) — rate-limit 엄격, 배치엔 자체 캐시 필수.

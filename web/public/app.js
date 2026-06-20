@@ -82,6 +82,10 @@
     if (isFree(e.price)) b.push('<span class="badge free">무료</span>');
     if (e.status === "Open") b.push('<span class="badge open">신청가능</span>');
     if (e.event_type) b.push(`<span class="badge">${e.event_type}</span>`);
+    if (e.verification === "web-discovered") {
+      const c = e.confidence != null ? ` ${Math.round(e.confidence * 100)}%` : "";
+      b.push(`<span class="badge discovered" title="웹검색으로 발견된 미검증 후보">🔎 발견${c}</span>`);
+    }
     return b.join(" ");
   }
 

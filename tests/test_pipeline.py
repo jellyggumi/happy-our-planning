@@ -5,6 +5,8 @@
 from __future__ import annotations
 
 import datetime as dt
+import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -16,6 +18,9 @@ from scripts.normalize import upsert as upsert_mod
 from scripts.recommend import rank
 from scripts.notify import dispatch as notify
 from scripts.macro import apply as macro
+from scripts.ingest import websearch
+from scripts.build import build_sqlite
+from scripts.recommend import ai_planner
 
 
 class TestConfig(unittest.TestCase):
@@ -215,6 +220,167 @@ class TestMacro(unittest.TestCase):
     def test_unknown_site_manual(self):
         job = macro.plan_job({"id": "m4", "url": "https://unknown.example/x"}, {})
         self.assertEqual(job["mode"], "manual")
+
+
+
+class TestWebSearch(unittest.TestCase):
+    def test_offline_collect_maps_and_filters(self):
+        rows = websearch.WebSearchAdapter(offline=True).collect()
+        ids = {r["id"] for r in rows}
+        # 3건 매핑(날짜+지역 충족), 저신뢰/무날짜 블로그 1건은 제외
+        self.assertEqual(len(rows), 3)
+        first = next(r for r in rows if r["location"]["sido"] == "서울특별시"
+                     and "한강" in r["name"])
+        self.assertEqual(first["source"], "websearch")
+        self.assertEqual(first["x_verification"], "web-discovered")
+        self.assertTrue(first["start_date"].startswith("2026-08-01"))
+        self.assertTrue(first["content_hash"].startswith("sha256:"))
+        # 신청기간 명시 → Open
+        self.assertEqual(first["status"], "Open")
+
+    def test_low_confidence_blog_excluded(self):
+        rows = websearch.WebSearchAdapter(offline=True).collect()
+        self.assertFalse(any("some-blog" in r.get("source_url", "") for r in rows))
+
+    def test_trusted_domain_confidence_bump(self):
+        ad = websearch.WebSearchAdapter(offline=True)
+        plain = ad._confidence({"url": "https://x.example.com/a", "score": 0.5})
+        trusted = ad._confidence({"url": "https://busan.go.kr/a", "score": 0.5})
+        self.assertAlmostEqual(plain, 0.5, places=3)
+        self.assertAlmostEqual(trusted, 0.6, places=3)
+
+    def test_sido_extracted_from_text_when_missing(self):
+        hit = {"title": "경기도 수원 행사", "url": "https://e.go.kr/a",
+               "snippet": "체험", "start_date": "2026-09-12", "score": 0.9}
+        ev = websearch.WebSearchAdapter(offline=True).map_to_okf(hit)
+        self.assertEqual(ev["location"]["sido"], "경기도")
+        self.assertEqual(ev["themes"], ["체험"])
+
+    def test_no_date_hit_skipped(self):
+        hit = {"title": "서울특별시 무슨 글", "url": "https://e.go.kr/a", "score": 0.9}
+        self.assertIsNone(websearch.WebSearchAdapter(offline=True).map_to_okf(hit))
+
+    def test_parse_exa_shape(self):
+        resp = {"results": [{"title": "T", "url": "https://u", "text": "S",
+                             "publishedDate": "2026-06-01T00:00:00Z", "score": 0.8}]}
+        hits = websearch.parse_exa(resp)
+        self.assertEqual(hits[0]["provider"], "exa")
+        self.assertEqual(hits[0]["snippet"], "S")
+        self.assertAlmostEqual(hits[0]["score"], 0.8)
+
+    def test_parse_brave_rank_score(self):
+        resp = {"web": {"results": [
+            {"title": "A", "url": "https://a", "description": "d1"},
+            {"title": "B", "url": "https://b", "description": "d2"}]}}
+        hits = websearch.parse_brave(resp)
+        self.assertEqual(hits[0]["provider"], "brave")
+        self.assertGreater(hits[0]["score"], hits[1]["score"])  # 상위가 더 높음
+
+    def test_parse_tavily_shape(self):
+        resp = {"results": [{"title": "T", "url": "https://u", "content": "C",
+                             "score": 0.7, "published_date": "2026-05-01"}]}
+        hits = websearch.parse_tavily(resp)
+        self.assertEqual(hits[0]["snippet"], "C")
+        self.assertEqual(hits[0]["published"], "2026-05-01")
+
+
+class TestSqlite(unittest.TestCase):
+    def _events(self):
+        return [
+            {"id": "a", "name": "무료 음악축제", "description": "한강 공연",
+             "themes": ["축제", "공연"], "start_date": "2026-08-01T00:00:00+09:00",
+             "status": "Open", "sido": "서울특별시", "event_type": "Festival",
+             "age_bands": ["어린이"], "price": "free"},
+            {"id": "b", "name": "부산 전시회", "description": "현대미술",
+             "themes": ["전시"], "start_date": "2026-09-01T00:00:00+09:00",
+             "status": "Scheduled", "sido": "부산광역시", "event_type": "ExhibitionEvent",
+             "age_bands": [], "price": 10000},
+        ]
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.db = Path(self.tmp.name) / "events.db"
+        build_sqlite.build(self.db, events=self._events())
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_build_counts(self):
+        rows = build_sqlite.search(self.db)
+        self.assertEqual(len(rows), 2)
+
+    def test_fts_korean_match(self):
+        hits = build_sqlite.search(self.db, text="축제")
+        self.assertEqual([h["id"] for h in hits], ["a"])
+
+    def test_filter_sido_and_theme(self):
+        self.assertEqual([h["id"] for h in build_sqlite.search(self.db, sido="부산광역시")],
+                         ["b"])
+        self.assertEqual([h["id"] for h in build_sqlite.search(self.db, theme="공연")],
+                         ["a"])
+
+    def test_filter_status_and_themes_decoded(self):
+        hits = build_sqlite.search(self.db, status="Open")
+        self.assertEqual(len(hits), 1)
+        self.assertIn("축제", hits[0]["themes"])  # JSON 디코딩 확인
+
+
+class TestAiPlanner(unittest.TestCase):
+    def _events(self):
+        return [
+            {"id": "a", "name": "무료공연", "sido": "서울특별시", "themes": ["공연"],
+             "age_bands": ["어린이"], "price": "free", "status": "Open",
+             "start_date": "2026-07-18T00:00:00+09:00",
+             "end_date": "2026-07-20T00:00:00+09:00", "lat": 37.57, "lng": 126.97},
+        ]
+
+    def _profile(self):
+        return {"regions": ["서울특별시"], "themes": ["공연"], "age_band": "어린이",
+                "available_dates": ["2026-07-18"],
+                "prefs": {"free_only": True, "max_per_day": 2}}
+
+    def test_build_request_has_schema_and_ids(self):
+        cands = rank.recommend(self._profile(), self._events())
+        req = ai_planner.build_request(self._profile(), cands)
+        self.assertEqual(req["generationConfig"]["responseMimeType"], "application/json")
+        self.assertIn("responseSchema", req["generationConfig"])
+        self.assertIn("a", json.dumps(req, ensure_ascii=False))
+
+    def test_parse_plan_valid(self):
+        text = json.dumps({"week_of": "2026-07-18", "days": [
+            {"date": "2026-07-18", "items": [{"event_id": "a", "reason": "무료"}]}]})
+        resp = {"candidates": [{"content": {"parts": [{"text": text}]}}]}
+        plan = ai_planner.parse_plan(resp)
+        self.assertEqual(plan["days"][0]["items"][0]["event_id"], "a")
+
+    def test_parse_plan_rejects_bad_shape(self):
+        text = json.dumps({"week_of": "2026-07-18"})  # days 누락
+        resp = {"candidates": [{"content": {"parts": [{"text": text}]}}]}
+        with self.assertRaises(ValueError):
+            ai_planner.parse_plan(resp)
+
+    def test_validate_plan_requires_event_id(self):
+        with self.assertRaises(ValueError):
+            ai_planner.validate_plan({"week_of": "w", "days": [
+                {"date": "d", "items": [{"reason": "x"}]}]})
+
+    def test_constrain_drops_hallucinated_ids(self):
+        plan = {"week_of": "w", "days": [{"date": "d", "items": [
+            {"event_id": "a"}, {"event_id": "ghost"}]}]}
+        out = ai_planner._constrain_to_candidates(plan, [{"id": "a"}])
+        self.assertEqual([i["event_id"] for i in out["days"][0]["items"]], ["a"])
+
+    def test_plan_falls_back_without_key(self):
+        env = {k: v for k, v in os.environ.items()
+               if k not in ("GOOGLE_AI_STUDIO_KEY", "GEMINI_KEY")}
+        old = dict(os.environ)
+        os.environ.clear(); os.environ.update(env)
+        try:
+            result = ai_planner.plan(self._profile(), self._events())
+        finally:
+            os.environ.clear(); os.environ.update(old)
+        self.assertEqual(result["engine"], "rule-based-fallback")
+        self.assertEqual(result["days"][0]["items"][0]["event_id"], "a")
 
 
 if __name__ == "__main__":

@@ -14,11 +14,13 @@ from scripts.common.config import ROOT, sources
 from scripts.ingest.base import now_kst
 from scripts.ingest.kopis import KopisAdapter
 from scripts.ingest.tourapi import TourApiAdapter
+from scripts.ingest.websearch import WebSearchAdapter
 from scripts.normalize.upsert import upsert
 
 ADAPTERS = {
     "kopis": KopisAdapter,
     "tourapi": TourApiAdapter,
+    "websearch": WebSearchAdapter,
 }
 
 SOURCES_LOG_DIR = ROOT / "knowledge" / "sources"

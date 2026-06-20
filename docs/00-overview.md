@@ -60,3 +60,4 @@ updated: 2026-06-20
 - [08 AI 추천 플래닝](08-ai-planning.md)
 - [09 무료 SaaS 스택](09-saas-free-stack.md)
 - [10 로드맵 & 마일스톤](10-roadmap-milestones.md)
+- [11 웹검색 발견·SQLite·Gemini (2026 개선)](11-discovery-sqlite-ai.md)

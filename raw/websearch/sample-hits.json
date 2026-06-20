@@ -1,0 +1,51 @@
+[
+  {
+    "title": "서울특별시 2026 한강 여름 무료 가족 축제 신청 안내",
+    "url": "https://culture.seoul.go.kr/festival/2026-hangang-summer",
+    "snippet": "서울특별시가 2026년 8월 1일부터 8월 3일까지 한강공원에서 무료 가족 축제를 개최한다. 신청은 7월 1일부터.",
+    "published": "2026-06-18",
+    "sido": "서울특별시",
+    "start_date": "2026-08-01",
+    "end_date": "2026-08-03",
+    "application_start": "2026-07-01",
+    "application_end": "2026-07-25",
+    "theme": "축제",
+    "price": "free",
+    "provider": "exa",
+    "query": "서울특별시 2026 무료 행사 신청",
+    "score": 0.91
+  },
+  {
+    "title": "부산 청년 공모전 2026 모집 — 부산광역시 주최",
+    "url": "https://www.busan.go.kr/contest/2026-youth",
+    "snippet": "부산광역시 주관 청년 아이디어 공모전. 접수기간 2026-07-05 ~ 2026-08-20.",
+    "published": "2026-06-15",
+    "start_date": "2026-07-05",
+    "application_start": "2026-07-05",
+    "application_end": "2026-08-20",
+    "theme": "공모전",
+    "provider": "exa",
+    "query": "부산광역시 공모전 모집 2026",
+    "score": 0.78
+  },
+  {
+    "title": "경기도 어린이 과학 체험전 2026 (수원)",
+    "url": "https://ggc.ggcf.kr/exhibit/2026-science",
+    "snippet": "경기도 수원에서 열리는 어린이 과학 체험 전시. 2026년 9월 12일 개막.",
+    "published": "2026-06-10",
+    "start_date": "2026-09-12",
+    "theme": "체험",
+    "provider": "exa",
+    "query": "경기도 체험 축제 2026",
+    "score": 0.63
+  },
+  {
+    "title": "전국 행사 종합 안내 블로그 모음",
+    "url": "https://some-blog.example.com/events",
+    "snippet": "여러 행사를 모아 소개합니다. 날짜와 지역은 본문 참고.",
+    "published": "2026-06-01",
+    "provider": "exa",
+    "query": "무료 행사 신청",
+    "score": 0.30
+  }
+]

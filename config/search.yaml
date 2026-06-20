@@ -1,0 +1,41 @@
+# 웹 검색 API(브라우저 검색) 제공자 선언 — 행사 "발견(discovery)" 레이어.
+# 공공 API가 놓치는 신규/모집형 행사를 키워드로 발견해 OKF 후보로 적재한다.
+# 모든 제공자는 무료 티어 우선. 키는 .env / GitHub Secrets 로만 주입(저장소 미커밋).
+default_provider: exa
+
+providers:
+  exa:
+    enabled: true
+    base_url: "https://api.exa.ai/search"
+    secret_env: EXA_API_KEY
+    # Exa: 의미 기반(neural) 검색 + 본문 요약. 월 무료 크레딧.
+    free_tier: "월 1,000 검색(무료 크레딧)"
+    num_results: 10
+  brave:
+    enabled: true
+    base_url: "https://api.search.brave.com/res/v1/web/search"
+    secret_env: BRAVE_API_KEY
+    # Brave Search API: 독립 인덱스. 무료 플랜 월 2,000 쿼리(1 qps).
+    free_tier: "월 2,000 쿼리(무료 플랜)"
+    num_results: 10
+  tavily:
+    enabled: true
+    base_url: "https://api.tavily.com/search"
+    secret_env: TAVILY_API_KEY
+    # Tavily: LLM/RAG 친화 검색. 월 1,000 크레딧 무료.
+    free_tier: "월 1,000 크레딧(무료)"
+    num_results: 10
+
+# 발견용 질의(지역·테마 축으로 확장). {region}/{theme}/{year} 치환.
+queries:
+  - "{region} {year} 무료 행사 신청"
+  - "{region} {theme} 축제 {year}"
+  - "{region} 공모전 모집 {year}"
+
+# 발견 후보 신뢰도 가드: 아래 점수 미만은 적재하지 않음(노이즈 차단).
+min_confidence: 0.45
+# 도메인 화이트리스트(가점). 공공/지자체/공식 도메인 우선.
+trusted_domains:
+  - go.kr
+  - or.kr
+  - ac.kr

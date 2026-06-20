@@ -11,6 +11,8 @@ raw/**/*
 # 빌드 산출물 (web/public/data/*.json 은 git 기반 정적 배포를 위해 커밋함)
 node_modules/
 web/dist/
+# SQLite 파생 인덱스(언제든 재생성, 바이너리) — 커밋 안 함
+web/public/data/*.db
 
 # 에이전트 세션 내부 파일
 .jeo/

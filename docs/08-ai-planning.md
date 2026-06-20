@@ -60,3 +60,11 @@ score = Σ 가중치:
 - 프로필 입력 → 유효 JSON 플랜 출력(스키마 통과).
 - free_only=true면 유료 행사 미포함.
 - LLM 실패 시 규칙 기반 폴백 동작.
+
+## 8. 구현 (Google AI Studio)
+- 모듈: `scripts/recommend/ai_planner.py` (CLI: `python -m scripts.recommend.ai_planner`).
+- 1단계 후보: `scripts.recommend.rank.recommend`. 2단계: Gemini `generateContent`에
+  `responseSchema`로 JSON 강제 → `parse_plan/validate_plan`로 검증.
+- 환각 가드: 후보 밖 `event_id`는 `_constrain_to_candidates`가 제거.
+- 키: `GOOGLE_AI_STUDIO_KEY`(우선)/`GEMINI_KEY`, 모델 `GEMINI_MODEL`(기본
+  `gemini-2.0-flash`). 무키·실패 시 `rank.plan_week` 규칙 폴백. 상세 11 문서.
