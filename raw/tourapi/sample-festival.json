@@ -1,0 +1,44 @@
+{
+  "response": {
+    "header": { "resultCode": "0000", "resultMsg": "OK" },
+    "body": {
+      "items": {
+        "item": [
+          {
+            "contentid": "3001001",
+            "title": "강릉 단오제",
+            "addr1": "강원특별자치도 강릉시 단오장길 1",
+            "eventstartdate": "20260608",
+            "eventenddate": "20260615",
+            "firstimage": "https://tong.visitkorea.or.kr/festival/3001001.jpg",
+            "mapx": "128.8761",
+            "mapy": "37.7519",
+            "areacode": "32"
+          },
+          {
+            "contentid": "3001002",
+            "title": "보령 머드축제",
+            "addr1": "충청남도 보령시 대해로 123",
+            "eventstartdate": "20260717",
+            "eventenddate": "20260726",
+            "firstimage": "https://tong.visitkorea.or.kr/festival/3001002.jpg",
+            "mapx": "126.5119",
+            "mapy": "36.3216",
+            "areacode": "34"
+          },
+          {
+            "contentid": "3001003",
+            "title": "서울 한강 여름축제",
+            "addr1": "서울특별시 영등포구 여의동로 330",
+            "eventstartdate": "20260801",
+            "eventenddate": "20260810",
+            "firstimage": "https://tong.visitkorea.or.kr/festival/3001003.jpg",
+            "mapx": "126.9325",
+            "mapy": "37.5283",
+            "areacode": "1"
+          }
+        ]
+      }
+    }
+  }
+}

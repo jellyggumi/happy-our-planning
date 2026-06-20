@@ -1,0 +1,25 @@
+# 신청 매크로 사이트 프로필. automation_allowed=false 면 반자동(사용자 최종제출).
+sites:
+  - key: mock-festival         # 자체 mock 폼 (자동제출 E2E 데모용)
+    match_url: "mock.local/apply"
+    automation_allowed: true
+    auth: { type: none }
+    steps:
+      - { action: goto, url: "{event.url}" }
+      - { action: fill, selector: "#name", value: "{profile.name}" }
+      - { action: fill, selector: "#phone", value: "{profile.phone}" }
+      - { action: check, selector: "#agree" }
+      - { action: submit, selector: "#submit" }
+    success_signal: { selector: ".apply-complete", text: "신청완료" }
+
+  - key: example-city-festival # 약관상 자동제출 금지 → 반자동
+    match_url: "apply.example-city.go.kr"
+    automation_allowed: false
+    auth: { type: phone_otp }
+    steps:
+      - { action: goto, url: "{event.url}" }
+      - { action: fill, selector: "#name", value: "{profile.name}" }
+      - { action: fill, selector: "#phone", value: "{profile.phone}" }
+      - { action: check, selector: "#agree" }
+      - { action: pause, reason: "본인인증/최종제출은 사용자가 수행" }
+    success_signal: { selector: ".apply-complete", text: "신청완료" }

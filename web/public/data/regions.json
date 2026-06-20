@@ -1,0 +1,41 @@
+[
+  {
+    "sido": "서울특별시",
+    "slug": "seoul",
+    "count": 3,
+    "centroid": [
+      37.550399999999996,
+      126.95425
+    ]
+  },
+  {
+    "sido": "강원특별자치도",
+    "slug": "gangwon",
+    "count": 1,
+    "centroid": [
+      37.7519,
+      128.8761
+    ]
+  },
+  {
+    "sido": "충청남도",
+    "slug": "chungnam",
+    "count": 1,
+    "centroid": [
+      36.3216,
+      126.5119
+    ]
+  },
+  {
+    "sido": "부산광역시",
+    "slug": "busan",
+    "count": 1,
+    "centroid": null
+  },
+  {
+    "sido": "제주특별자치도",
+    "slug": "jeju",
+    "count": 1,
+    "centroid": null
+  }
+]

@@ -1,0 +1,14 @@
+# 나이대 밴드 정의 + typicalAgeRange 파싱 규칙
+bands:
+  - { key: "영유아",   label: "영유아 (0-6)",   min: 0,  max: 6 }
+  - { key: "어린이",   label: "어린이 (7-13)",  min: 7,  max: 13 }
+  - { key: "청소년",   label: "청소년 (14-18)", min: 14, max: 18 }
+  - { key: "청년",     label: "청년 (19-34)",   min: 19, max: 34 }
+  - { key: "중장년",   label: "중장년 (35-64)", min: 35, max: 64 }
+  - { key: "노년",     label: "노년 (65+)",     min: 65, max: 200 }
+  - { key: "전연령",   label: "전연령",         min: 0,  max: 200 }
+
+# age 문자열 파싱: "7-13", "19-", "-12", "all"/"전체" → 밴드 set
+parse:
+  all_tokens: ["all", "전체", "전연령", "누구나"]
+  range_regex: "^(\\d+)?\\s*-\\s*(\\d+)?$"

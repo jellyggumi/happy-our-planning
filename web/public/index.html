@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Our Planning — 전국 행사 검색·신청·추천</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🗺️ Happy Our Planning</h1>
+    <span id="freshness" class="freshness">불러오는 중…</span>
+  </header>
+
+  <section class="filters" aria-label="검색 필터">
+    <input id="q" type="search" placeholder="키워드 검색 (제목·설명·테마)" />
+    <select id="sido"><option value="">전체 지역</option></select>
+    <select id="theme"><option value="">전체 테마</option></select>
+    <select id="age"><option value="">전체 나이대</option></select>
+    <input id="from" type="date" title="시작일(이후)" />
+    <input id="to" type="date" title="종료일(이전)" />
+    <label class="chk"><input id="applyable" type="checkbox" /> 신청가능만</label>
+    <button id="reset" type="button">초기화</button>
+  </section>
+
+  <main class="layout">
+    <div id="map" aria-label="지도"></div>
+    <section class="results">
+      <div class="results-head">
+        <strong id="count">0</strong>건
+        <button id="aiBtn" type="button" class="ai">🧠 AI 추천 플랜</button>
+      </div>
+      <ul id="list" class="cards"></ul>
+    </section>
+  </main>
+
+  <dialog id="detail"></dialog>
+  <dialog id="aiDialog"></dialog>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

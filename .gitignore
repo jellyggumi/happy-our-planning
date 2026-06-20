@@ -1,0 +1,16 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# 원본 응답은 용량 큼 → 샘플 fixture(sample-*)만 커밋, 나머지 무시
+raw/**/*
+!raw/**/
+!raw/**/sample-*
+
+# 빌드 산출물 (web/public/data/*.json 은 git 기반 정적 배포를 위해 커밋함)
+node_modules/
+web/dist/
+
+# 에이전트 세션 내부 파일
+.jeo/

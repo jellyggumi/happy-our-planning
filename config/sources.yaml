@@ -1,0 +1,37 @@
+# 데이터 소스 선언. 소스 추가 = 여기 항목 1개 + scripts/ingest/<key>.py 1개.
+sources:
+  - key: kopis
+    enabled: true
+    base_url: "https://www.kopis.or.kr/openApi/restful"
+    auth: { type: query_key, param: service, secret_env: KOPIS_KEY }
+    format: xml
+    rate_limit_per_day: 5000
+    endpoints:
+      list: "/pblprfr?stdate={start}&eddate={end}&cpage={page}&rows=100"
+      detail: "/pblprfr/{id}"
+    map_profile: kopis
+
+  - key: tourapi
+    enabled: true
+    base_url: "https://apis.data.go.kr/B551011/KorService2"
+    auth: { type: query_key, param: serviceKey, secret_env: TOURAPI_KEY }
+    format: json
+    rate_limit_per_day: 10000
+    endpoints:
+      festival: "/searchFestival2?eventStartDate={start}&numOfRows=100&pageNo={page}&MobileOS=ETC&MobileApp=hop&_type=json"
+    map_profile: tourapi
+
+  - key: datagokr
+    enabled: false   # 엔드포인트별 키/스키마 등록 후 활성화
+    base_url: "https://api.data.go.kr"
+    auth: { type: query_key, param: serviceKey, secret_env: DATAGOKR_KEY }
+    format: json
+    rate_limit_per_day: 10000
+    endpoints: {}
+    map_profile: datagokr
+
+geocoder:
+  provider: vworld
+  base_url: "https://api.vworld.kr/req/address"
+  auth: { type: query_key, param: key, secret_env: VWORLD_KEY }
+  cache: "knowledge/_geocache.json"

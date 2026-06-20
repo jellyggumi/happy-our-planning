@@ -1,0 +1,40 @@
+name: ingest
+# 매일 03:00 KST(18:00 UTC) 공공 API 수집 → 정규화 → 지식 DB upsert → 검증 → 빌드 → 커밋
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Run pipeline (fetch → normalize → upsert → validate → build → wiki)
+        env:
+          KOPIS_KEY: ${{ secrets.KOPIS_KEY }}
+          TOURAPI_KEY: ${{ secrets.TOURAPI_KEY }}
+          DATAGOKR_KEY: ${{ secrets.DATAGOKR_KEY }}
+          VWORLD_KEY: ${{ secrets.VWORLD_KEY }}
+        run: python -m scripts.run_pipeline
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests
+
+
+      - name: Commit changes
+        run: |
+          git config user.name "hop-bot"
+          git config user.email "bot@happy-our-planning"
+          git add knowledge/ web/public/data/ || true
+          git commit -m "chore(ingest): daily update $(date -u +%F)" || echo "no changes"
+          git push || echo "nothing to push"

@@ -1,0 +1,27 @@
+:root { --bg:#0f1420; --card:#1b2233; --fg:#e8ecf4; --mut:#9aa6bd; --acc:#5b8cff; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, "Apple SD Gothic Neo", sans-serif; background:var(--bg); color:var(--fg); }
+.topbar { display:flex; align-items:center; gap:12px; padding:10px 16px; background:#121829; position:sticky; top:0; z-index:500; }
+.topbar h1 { font-size:18px; margin:0; }
+.freshness { color:var(--mut); font-size:12px; }
+.filters { display:flex; flex-wrap:wrap; gap:8px; padding:10px 16px; background:#141b2c; }
+.filters input, .filters select, .filters button { background:var(--card); color:var(--fg); border:1px solid #2a3450; border-radius:8px; padding:8px 10px; font-size:13px; }
+.filters .chk { display:flex; align-items:center; gap:6px; color:var(--mut); font-size:13px; }
+#q { min-width:220px; flex:1; }
+.layout { display:grid; grid-template-columns: 1fr 1fr; gap:0; height: calc(100vh - 116px); }
+#map { height:100%; }
+.results { overflow:auto; padding:12px 16px; }
+.results-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.ai { background:var(--acc); border:none; color:#fff; border-radius:8px; padding:8px 12px; cursor:pointer; }
+.cards { list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.card { background:var(--card); border:1px solid #2a3450; border-radius:12px; padding:12px; cursor:pointer; }
+.card h3 { margin:0 0 6px; font-size:15px; }
+.card .meta { color:var(--mut); font-size:12px; display:flex; flex-wrap:wrap; gap:8px; }
+.badge { background:#23304d; color:#bcd0ff; border-radius:999px; padding:2px 8px; font-size:11px; }
+.badge.free { background:#1f3d2e; color:#7be0a8; }
+.badge.open { background:#3d3320; color:#ffd479; }
+dialog { background:var(--card); color:var(--fg); border:1px solid #2a3450; border-radius:14px; max-width:560px; width:92%; padding:18px; }
+dialog h2 { margin-top:0; }
+dialog button.close { float:right; background:none; border:none; color:var(--mut); font-size:20px; cursor:pointer; }
+dialog a, dialog .act { display:inline-block; margin:6px 8px 0 0; background:var(--acc); color:#fff; text-decoration:none; padding:8px 12px; border-radius:8px; border:none; cursor:pointer; }
+@media (max-width: 820px) { .layout { grid-template-columns: 1fr; height:auto; } #map { height:340px; } }
