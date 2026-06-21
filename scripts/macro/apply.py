@@ -1,7 +1,7 @@
 """신청 매크로 — 잡 모델·스텝 렌더링·안전 게이팅 (docs/06).
 
 이 모듈은 브라우저 실행 전 단계(잡 계획·약관 게이팅)를 담당한다.
-실제 폼 입력은 Playwright 러너가 plan_job() 결과를 소비해 수행한다(다음 단계).
+실제 폼 입력은 Playwright 러너(scripts/macro/runner.py)가 plan_job() 결과를 소비해 수행한다.
 
 안전 보장:
 - automation_allowed=False 사이트는 mode='semi'(반자동)로 강등되고

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>모의 신청 폼 (러너 E2E)</title>
+</head>
+<body>
+  <h1>행사 신청</h1>
+  <form id="apply-form" onsubmit="return false;">
+    <label>이름 <input id="name" name="name" type="text" /></label>
+    <label>연락처 <input id="phone" name="phone" type="text" /></label>
+    <label><input id="agree" type="checkbox" /> 개인정보 수집·이용 동의</label>
+    <button id="submit" type="button"
+            onclick="if (document.getElementById('agree').checked) { document.getElementById('done').style.display = 'block'; }">
+      제출
+    </button>
+  </form>
+  <div class="apply-complete" id="done" style="display:none">신청완료: 접수되었습니다</div>
+</body>
+</html>
