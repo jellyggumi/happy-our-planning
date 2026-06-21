@@ -37,7 +37,6 @@ def main(argv: list[str]) -> int:
     wiki_index.build()
     print("완료. 정적 사이트: web/public/ (data/*.json, events.db 갱신됨)")
     return 0
-    return 0
 
 
 if __name__ == "__main__":
