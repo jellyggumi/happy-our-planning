@@ -1,0 +1,79 @@
+# 놓치마(Notchima) — 동결 시드 (실행 SSOT / ooo Freeze 레이어)
+# 규칙: 이 시드가 "완료" 게이트다. 요구 변경은 specs/spec.md를 먼저 고치고 여기로 재동결.
+# 방향은 단방향: spec.md -> seed.yaml. 두 파이프라인을 병렬 SSOT로 돌리지 않는다.
+seed:
+  name: notchima-event-infra
+  spec_ref: specs/spec.md@1.0.0
+  ambiguity: 0.15            # 인터뷰 후 잔여 모호도(<=0.2 통과)
+  weighting: brownfield     # 성숙 코드베이스(1975 LOC, 40 tests) 위에 증분
+
+# tools: 시드가 허가한 하니스만 사용. 미명시 도구 사용 = 측정 가능한 드리프트.
+tools:
+  pipeline:   "python -m scripts.run_pipeline"      # 수집→검증→인덱스→sqlite→wiki
+  validate:   "python scripts/build/validate.py"    # OKF 스키마 게이트 (rc==0)
+  sqlite:     "python -m scripts.build.build_sqlite" # events.db 재생성(파생물)
+  tests:      "python -m unittest discover -s tests"
+  macro:      "playwright"                            # F3.4 러너 — 헤드리스, mock 우선
+  notify:     "telegram-bot-api"                      # F4.3 — 토큰 없으면 dry-run
+  survey_validator: "python3 ~/.agents/skills/survey/scripts/validate_survey_artifacts.py"
+
+# constraints: spec.md §2 의 C1~C7 을 도구 수준으로 못박음.
+constraints:
+  - id: C1-free-only
+    rule: "외부 호출은 무료티어만. 키 부재 시 오프라인 픽스처로 전 파이프라인 rc==0."
+  - id: C2-flatfile-ssot
+    rule: "events.db 는 삭제 후 재생성 가능한 파생물. flat-file(Markdown+YAML)이 SSOT."
+  - id: C3-okf-schema
+    rule: "모든 레코드 schema.org/Event 정합. validate.py rc==0 아니면 빌드 중단."
+  - id: C4-no-secrets
+    rule: "키 리터럴 커밋 금지. .env / GitHub Secrets 주입만 허용."
+  - id: C5-tos-gate
+    rule: "automation_allowed=False 사이트는 자동 submit 제거 + 반자동 강등 강제."
+  - id: C6-ai-guardrail
+    rule: "AI 출력 responseSchema 강제 + 환각 id 제거 + 규칙 폴백. 무가드 출력 금지."
+  - id: C7-zero-cost
+    rule: "월 0원. 정적 배포(Cloudflare Pages) + 무료 CI(GitHub Actions)."
+
+# success_criteria: spec.md 의 AC 를 기계검증형으로 미러링. evaluate 단계가 증거를 요구.
+success_criteria:
+  - id: AC-F1
+    check: "tools.pipeline (오프라인) rc==0 && web/public/data/events.json 존재"
+    evidence: "exit code + 파일 stat"
+  - id: AC-F1-idempotent
+    check: "tests::TestUpsert 3건 green"
+    evidence: "unittest --json/요약"
+  - id: AC-F2-search
+    check: "tests::TestSqlite 4건 green (FTS 한국어 + 교차필터)"
+    evidence: "unittest 요약"
+  - id: AC-F3-gate
+    check: "tests::TestMacro 4건 green (자동/반자동 게이팅)"
+    evidence: "unittest 요약"
+  - id: AC-F3-runner          # 신규(미구현) — tasks T1
+    check: "Playwright 러너가 mock 폼에 plan_job 결과 입력 후 자동제출 E2E green"
+    evidence: "headless run 로그 + 제출 확인 스크린샷/JSON"
+    status: pending
+  - id: AC-F4-notify
+    check: "tests::TestNotify 3건 green"
+    evidence: "unittest 요약"
+  - id: AC-F4-channel         # 신규(부분) — tasks T2
+    check: "토큰 주입 시 Telegram 1건 도달; 무토큰 dry-run 무오류"
+    evidence: "전송 응답 코드 / dry-run stdout"
+    status: pending
+  - id: AC-F5-ai
+    check: "tests::TestAiPlanner 6건 + TestRecommend 3건 green"
+    evidence: "unittest 요약"
+  - id: AC-full
+    check: "tools.tests = 40+ green && tools.validate rc==0 && events.db 재생성 동일 카운트"
+    evidence: "통합 실행 로그"
+
+# evaluate: 종료코드가 아니라 산출물을 검증한다.
+evaluate:
+  rule: "verify artifacts, not exit codes"
+  artifacts: [events.json, events.db, facets.json, "knowledge/**", "unittest 요약"]
+  on_repeat_failure: "ooo unstuck (blind retry 금지)"
+
+# drift_guards: 자주 새는 곳.
+drift_guards:
+  - "run_pipeline.py 의 중복 dead `return 0` 제거(클린업) — tasks T6"
+  - "키 추가 시 search.yaml/ sources.yaml 에 무료티어 한도 주석 유지"
+  - "events.db 를 SSOT 로 취급 금지(파생물). knowledge/ 파일이 진실원천"

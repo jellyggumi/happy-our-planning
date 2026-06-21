@@ -61,3 +61,13 @@ updated: 2026-06-20
 - [09 무료 SaaS 스택](09-saas-free-stack.md)
 - [10 로드맵 & 마일스톤](10-roadmap-milestones.md)
 - [11 웹검색 발견·SQLite·Gemini (2026 개선)](11-discovery-sqlite-ai.md)
+- [12 네이밍 브레인스토밍](12-naming-brainstorm.md)
+- [13 브랜드](13-brand.md)
+
+## 8. 동결 계획 번들 (spec-stack)
+구현 게이트의 단일 진실원천은 `specs/`에 있다. 본 docs/는 설계 서술, `specs/`는 동결 명세·실행 SSOT.
+- [specs/README](../specs/README.md) — Write→Freeze→Run 인덱스
+- [specs/spec.md](../specs/spec.md) — 기계검증 AC가 달린 동결 명세(문서 SSOT)
+- [specs/seed.yaml](../specs/seed.yaml) — 도구 제약 + 성공기준(실행 SSOT)
+- [specs/tasks.md](../specs/tasks.md) — team executor 작업 큐(DONE/TODO)
+- [specs/cli-harness.md](../specs/cli-harness.md) — 산출물 증거 계약
