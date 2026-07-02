@@ -16,7 +16,7 @@ location:
 url: https://www.busan.go.kr/contest/2026-youth
 source: websearch
 source_url: https://www.busan.go.kr/contest/2026-youth
-fetched_at: '2026-06-21T09:44:16+09:00'
+fetched_at: '2026-07-02T23:11:59+09:00'
 x_provider: exa
 x_query: 부산광역시 공모전 모집 2026
 x_confidence: 0.88

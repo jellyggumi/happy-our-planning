@@ -16,7 +16,7 @@ location:
 url: https://ggc.ggcf.kr/exhibit/2026-science
 source: websearch
 source_url: https://ggc.ggcf.kr/exhibit/2026-science
-fetched_at: '2026-06-21T09:44:16+09:00'
+fetched_at: '2026-07-02T23:11:59+09:00'
 x_provider: exa
 x_query: 경기도 체험 축제 2026
 x_confidence: 0.63

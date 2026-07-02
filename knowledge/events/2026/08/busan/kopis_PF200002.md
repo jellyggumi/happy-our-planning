@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-01T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 부산시민회관
@@ -16,10 +16,11 @@ location:
 url: https://www.kopis.or.kr/por/db/pblprfr/pblprfrView.do?mt20id=PF200002
 source: kopis
 source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF200002
-fetched_at: '2026-06-21T09:44:16+09:00'
+fetched_at: '2026-07-02T23:11:57+09:00'
 end_date: '2026-08-15T23:59:59+09:00'
 image: https://www.kopis.or.kr/poster/PF200002.jpg
-content_hash: sha256:32fb7774a3e20735e55067d1992c99a5e93aa3bc9d2553ceb340a55bf1f9209e
+content_hash: sha256:ffa669947b48d1cfe1be6a71b63b1b725032192fc6036352ac7d924576953d17
+x_lastSeen: '2026-07-02T23:14:22+09:00'
 ---
 
 # 부산 어린이 인형극

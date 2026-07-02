@@ -12,6 +12,7 @@ import unittest
 from pathlib import Path
 
 from scripts.common import config, okf
+from scripts.ingest import kopis as kopis_mod, tourapi as tourapi_mod
 from scripts.ingest.kopis import KopisAdapter
 from scripts.ingest.tourapi import TourApiAdapter
 from scripts.normalize import upsert as upsert_mod
@@ -103,6 +104,87 @@ class TestAdapters(unittest.TestCase):
         self.assertEqual(e["location"]["sido"], "강원특별자치도")
         self.assertAlmostEqual(e["location"]["lat"], 37.7519, places=3)
 
+    def test_kopis_mapping_skips_missing_sido(self):
+        row = {
+            "mt20id": "PF_NO_AREA",
+            "prfnm": "지역 없는 공연",
+            "genrenm": "대중음악",
+            "prfpdfrom": "2026.07.18",
+            "prfpdto": "2026.07.19",
+        }
+        self.assertIsNone(KopisAdapter(offline=True).map_to_okf(row))
+
+
+    def test_kopis_remote_fetch_pages_until_short_page(self):
+        calls = []
+        old_fetch = kopis_mod._fetch_page
+
+        def fake_fetch(_httpx, url, params):
+            calls.append((url, params))
+            if len(calls) == 1:
+                return (
+                    "<dbs>"
+                    "<db><mt20id>PF_REMOTE</mt20id><prfnm>원격공연</prfnm>"
+                    "<genrenm>대중음악</genrenm><prfpdfrom>2026.07.18</prfpdfrom>"
+                    "<prfpdto>2026.07.19</prfpdto><prfstate>공연예정</prfstate>"
+                    "<fcltynm>공연장</fcltynm><area>서울</area></db>"
+                    "</dbs>"
+                )
+            return "<dbs></dbs>"
+
+        kopis_mod._fetch_page = fake_fetch
+        try:
+            adapter = KopisAdapter(offline=False)
+            adapter.api_key = "KEY"
+            rows = adapter.fetch_native()
+        finally:
+            kopis_mod._fetch_page = old_fetch
+
+        self.assertEqual(rows[0]["mt20id"], "PF_REMOTE")
+        self.assertEqual(len(calls), 1)  # 100건 미만 short page → 다음 페이지 요청 없음
+        self.assertEqual(calls[0][1]["service"], "KEY")
+        self.assertIn("stdate", calls[0][1])
+        self.assertIn("eddate", calls[0][1])
+
+    def test_remote_records_that_map_to_zero_fall_back_to_fixtures(self):
+        old_fetch = kopis_mod._fetch_page
+
+        def fake_fetch(_httpx, url, params):
+            return "<dbs><db><unexpected>shape</unexpected></db></dbs>"
+
+        kopis_mod._fetch_page = fake_fetch
+        try:
+            adapter = KopisAdapter(offline=False)
+            adapter.api_key = "KEY"
+            rows = adapter.collect()
+        finally:
+            kopis_mod._fetch_page = old_fetch
+
+        ids = {r["id"] for r in rows}
+        self.assertIn("kopis:PF200001", ids)
+
+    def test_tourapi_remote_empty_items_falls_back_to_fixtures(self):
+        calls = []
+        old_fetch = tourapi_mod._fetch_page
+
+        def fake_fetch(_httpx, url, params):
+            calls.append((url, params))
+            return {"response": {"body": {"items": ""}}}
+
+        tourapi_mod._fetch_page = fake_fetch
+        try:
+            adapter = TourApiAdapter(offline=False)
+            adapter.api_key = "KEY"
+            rows = adapter.fetch_native()
+        finally:
+            tourapi_mod._fetch_page = old_fetch
+
+        self.assertGreater(len(rows), 0)
+        self.assertEqual(rows[0]["contentid"], "3001001")
+        self.assertIn("eventStartDate", calls[0][1])
+        self.assertIn("pageNo", calls[0][1])
+        self.assertEqual(len(calls), 1)
+        self.assertEqual(calls[0][1]["serviceKey"], "KEY")
 
 class TestUpsert(unittest.TestCase):
     def setUp(self):
@@ -635,9 +717,16 @@ class TestGeocode(unittest.TestCase):
 
 class TestCommonHttp(unittest.TestCase):
     class _Resp:
-        def __init__(self, status_code, text=""):
+        def __init__(self, status_code, text="", headers=None, json_data=None):
             self.status_code = status_code
             self.text = text
+            self.headers = headers or {}
+            self._json_data = json_data
+
+        def json(self):
+            if self._json_data is None:
+                raise ValueError("no json")
+            return self._json_data
 
     class _Boom(Exception):
         pass
@@ -685,6 +774,53 @@ class TestCommonHttp(unittest.TestCase):
                 lambda: self._Resp(404, "nope"), retries=3, sleep=slept.append)
         self.assertEqual(cm.exception.status, 404)
         self.assertEqual(slept, [])  # 4xx는 재시도 안 함
+
+    def test_3xx_without_follow_redirects_is_not_success(self):
+        slept = []
+        with self.assertRaises(common_http.HttpError) as cm:
+            common_http.request_with_retry(
+                lambda: self._Resp(301, ""), retries=1, sleep=slept.append)
+        self.assertEqual(cm.exception.status, 301)
+        self.assertEqual(slept, [])
+
+    def test_retry_after_header_controls_sleep(self):
+        slept = []
+        seq = [
+            self._Resp(429, "slow", headers={"Retry-After": "2"}),
+            self._Resp(200),
+        ]
+        resp = common_http.request_with_retry(
+            lambda: seq.pop(0), retries=1, sleep=slept.append)
+        self.assertEqual(resp.status_code, 200)
+        self.assertEqual(slept, [2.0])
+
+    def test_quota_exhausted_429_fails_without_waiting(self):
+        slept = []
+        body = {
+            "error": {
+                "code": 429,
+                "message": "Individual quota reached. Resets in 28h48m25s.",
+                "status": "RESOURCE_EXHAUSTED",
+                "details": [
+                    {
+                        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+                        "reason": "QUOTA_EXHAUSTED",
+                        "metadata": {"quotaResetDelay": "103705.991228095s"},
+                    },
+                    {
+                        "@type": "type.googleapis.com/google.rpc.RetryInfo",
+                        "retryDelay": "103705.991228095s",
+                    },
+                ],
+            }
+        }
+        resp = self._Resp(429, json.dumps(body), json_data=body)
+        with self.assertRaises(common_http.HttpError) as cm:
+            common_http.request_with_retry(
+                lambda: resp, retries=2, sleep=slept.append)
+        self.assertEqual(cm.exception.status, 429)
+        self.assertAlmostEqual(cm.exception.retry_after, 103705.991228095)
+        self.assertEqual(slept, [])
 
     def test_retries_on_injected_exception_then_reraises(self):
         slept = []

@@ -35,7 +35,14 @@ class SourceAdapter:
     def fetch_native(self) -> list[dict]:
         if self.offline:
             return self._load_fixtures()
-        return self._fetch_remote()
+        records = self._fetch_remote()
+        if records:
+            return records
+        fixtures = self._load_fixtures()
+        if fixtures:
+            log.warning("[%s] remote returned 0 records; using fixtures", self.key)
+            return fixtures
+        return records
 
     def _load_fixtures(self) -> list[dict]:
         d = RAW_DIR / self.key
@@ -68,10 +75,9 @@ class SourceAdapter:
     def map_to_okf(self, native: dict) -> dict | None:
         raise NotImplementedError
 
-    def collect(self) -> list[dict]:
-        """native 수집 + OKF 매핑까지. None(매핑 실패)은 제외."""
+    def _map_records(self, records: list[dict]) -> list[dict]:
         out = []
-        for n in self.fetch_native():
+        for n in records:
             try:
                 okf = self.map_to_okf(n)
             except Exception as exc:  # 한 레코드 실패가 전체를 막지 않음
@@ -79,4 +85,16 @@ class SourceAdapter:
                 continue
             if okf:
                 out.append(okf)
+        return out
+
+    def collect(self) -> list[dict]:
+        """native 수집 + OKF 매핑까지. None(매핑 실패)은 제외."""
+        records = self.fetch_native()
+        out = self._map_records(records)
+        if out or self.offline:
+            return out
+        fixtures = self._load_fixtures()
+        if fixtures and fixtures != records:
+            log.warning("[%s] remote mapped to 0 OKF records; using fixtures", self.key)
+            return self._map_records(fixtures)
         return out

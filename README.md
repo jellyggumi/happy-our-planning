@@ -6,7 +6,7 @@
 
 [![ingest](https://github.com/jellyggumi/happy-our-planning/actions/workflows/ingest.yml/badge.svg)](https://github.com/jellyggumi/happy-our-planning/actions/workflows/ingest.yml)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Tests 70 passing](https://img.shields.io/badge/tests-70%20passing-success?logo=pytest&logoColor=white)](tests/test_pipeline.py)
+[![Tests 111 passing](https://img.shields.io/badge/tests-111%20passing-success?logo=python&logoColor=white)](tests/test_pipeline.py)
 [![Knowledge Format](https://img.shields.io/badge/data-schema.org%2FEvent-orange?logo=json&logoColor=white)](docs/02-data-model-okf.md)
 [![Hosting](https://img.shields.io/badge/SaaS-Cloudflare%20%2B%20GitHub%20Actions-F38020?logo=cloudflare&logoColor=white)](docs/09-saas-free-stack.md)
 [![Cost ₩0/month](https://img.shields.io/badge/cost-%E2%82%A90%2Fmonth-2ea44f)](docs/00-overview.md)
@@ -73,9 +73,9 @@ assets/       브랜드 자산 (마스코트·아이콘 원본)
 샘플 fixture(`raw/**/sample-*`)로 전체 파이프라인이 네트워크 없이 돈다.
 ```bash
 pip install -r requirements.txt
-python -m scripts.run_pipeline          # 수집(웹검색 포함)→정규화→검증→인덱스→SQLite→wiki
-python -m unittest discover -s tests    # 단위 테스트 70종 (67 통과 / 3 스킵: chromium 필요)
-python -m scripts.ingest.websearch      # 웹검색 발견 후보(Exa/Brave/Tavily, 오프라인 픽스처)
+python -m scripts.run_pipeline          # 수집(공공 API+웹검색)→정규화→검증→인덱스→SQLite→wiki
+python -m unittest discover -s tests    # 단위 테스트 111종 (108 통과 / 3 스킵: chromium 필요)
+python -m scripts.ingest.websearch      # 웹검색 발견 후보(Exa/Brave/Tavily, 원격 0건 시 fixture 폴백)
 python -m scripts.build.build_sqlite --query 축제   # SQLite FTS5 전문검색 데모
 python -m scripts.recommend.rank        # 규칙기반 추천 + 주간 플랜(JSON)
 python -m scripts.recommend.ai_planner  # Google AI Studio(Gemini) 플래너(+규칙 폴백)
@@ -85,11 +85,11 @@ python -m scripts.macro.apply           # 신청 매크로 잡 계획(약관 게
 # 정적 사이트 미리보기
 cd web/public && python -m http.server 8000   # → http://localhost:8000
 ```
-실제 운영 시 `.env`(`.env.example` 참고)에 무료 API 키를 넣으면 어댑터가 원격 수집으로 전환.
+실제 운영 시 `.env`(`.env.example` 참고)에 무료 API 키를 넣으면 KOPIS·TourAPI·웹검색 어댑터가 원격 수집으로 전환된다. 원격 API가 0건/매핑실패를 반환하면 fixture로 폴백해 기존 지식 DB를 잘못 archive하지 않는다.
 
 ## 지금 동작하는 것 (검증됨)
-- ✅ KOPIS·TourAPI 어댑터 → schema.org/Event(OKF) Markdown 적재, content_hash 증분 upsert + archived 정책
-- ✅ JSON Schema 검증 게이트, `events/facets/regions/updated.json` 빌드
+- ✅ KOPIS·TourAPI 원격 수집 → schema.org/Event(OKF) Markdown 적재, content_hash 증분 upsert + archived 정책
+- ✅ JSON Schema 검증 게이트, `events/facets/regions/updated.json` 빌드 (`2026-07-02`: OKF 508/508 통과, 정적 인덱스 505건)
 - ✅ 정적 UI: Leaflet 지도 + 5축 필터(지역/기간/나이/테마/키워드) + Fuse 검색 + AI 추천 다이얼로그
 - ✅ 규칙기반 추천/주간 플래너(무료, LLM 폴백), 마감임박 알람 + 중복억제
 - ✅ 신청 매크로 잡 계획 + 약관 자동제출 게이팅(반자동 강등 보장)
@@ -99,8 +99,8 @@ cd web/public && python -m http.server 8000   # → http://localhost:8000
 - ✅ 웹검색 발견 레이어(Exa·Brave·Tavily) — 신뢰도/날짜/지역 가드로 OKF 후보 적재, `🔎 발견` 배지
 - ✅ SQLite(libSQL) 파생 인덱스 `events.db` — FTS5 한국어 전문검색 + sido/theme/status 교차필터
 - ✅ Google AI Studio(Gemini) 주간 플래너 — responseSchema JSON 강제 + 환각 가드 + 규칙 폴백
-- ✅ 공통 HTTP 재시도 헬퍼(`scripts/common/http.py`) — 429/5xx 지수 백오프, 4xx 즉시 실패, AI 플래너 연동
+- ✅ 공통 HTTP 재시도 헬퍼(`scripts/common/http.py`) — 429/5xx 지수 백오프, 3xx/4xx 즉시 실패, 장시간 quota retry 즉시 폴백
 - ✅ 매크로 안전 불변 CI 검증 — 비자동 잡 submit 제거·pause 후 미제출을 chromium 없이 fake-page 스파이로 회귀 가드
 
 ## 상태
-- M0–M6 코어 및 검증 슬라이스 동작(샘플 데이터). Playwright 매크로 러너 및 Telegram 알림 채널 구현 완료. 다음: 실 API 키 연결(원격 수집), Cloudflare Pages/Workers 배포, 시/도 경계 GeoJSON.
+- M0–M6 코어 및 검증 슬라이스 동작. KOPIS 원격 수집 연결 완료(498건 수집, 지역 누락 해외 공연 제외), TourAPI 3건, 웹검색 fixture 폴백 포함 정적 인덱스 505건 생성. 다음: Cloudflare Pages/Workers 배포 검증, 시/도 경계 GeoJSON, 추가 공공 API(datagokr) 활성화.

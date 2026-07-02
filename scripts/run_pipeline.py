@@ -22,6 +22,8 @@ def main(argv: list[str]) -> int:
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     )
+    # httpx INFO 로그는 쿼리스트링 API 키를 그대로 노출할 수 있다.
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     log.info("== 1. 수집·정규화·적재 ==")
     to_okf.run(argv or None)
 

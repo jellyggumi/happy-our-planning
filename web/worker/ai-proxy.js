@@ -32,6 +32,43 @@ function json(body, status = 200) {
   });
 }
 
+function durationSeconds(value) {
+  if (!value || typeof value !== "string") return null;
+  const trimmed = value.trim();
+  if (/^\d+$/.test(trimmed)) return Number(trimmed);
+  const match = trimmed.match(/^(\d+(?:\.\d+)?)s$/);
+  return match ? Number(match[1]) : null;
+}
+
+function quotaRetryAfterSeconds(text) {
+  try {
+    const body = JSON.parse(text);
+    const details = body?.error?.details || [];
+    for (const detail of details) {
+      if (String(detail["@type"] || "").endsWith("google.rpc.RetryInfo")) {
+        const parsed = durationSeconds(detail.retryDelay);
+        if (parsed !== null) return parsed;
+      }
+    }
+    for (const detail of details) {
+      const parsed = durationSeconds(detail?.metadata?.quotaResetDelay);
+      if (parsed !== null) return parsed;
+    }
+  } catch (_) {
+    // Upstream이 JSON이 아니면 아래 문자열 가드만 사용.
+  }
+  return null;
+}
+
+function isQuotaExhausted(status, text) {
+  return status === 429 && (
+    text.includes("QUOTA_EXHAUSTED") ||
+    text.includes("RESOURCE_EXHAUSTED") ||
+    text.includes("Individual quota reached")
+  );
+}
+
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
@@ -71,6 +108,14 @@ export default {
     });
 
     const text = await upstream.text();
+    if (isQuotaExhausted(upstream.status, text)) {
+      return json({
+        error: "Gemini quota exhausted — 규칙 기반 폴백 사용",
+        fallback: true,
+        upstreamStatus: upstream.status,
+        retryAfterSeconds: quotaRetryAfterSeconds(text),
+      }, 503);
+    }
     return new Response(text, {
       status: upstream.status,
       headers: cors({ "Content-Type": "application/json; charset=utf-8" }),

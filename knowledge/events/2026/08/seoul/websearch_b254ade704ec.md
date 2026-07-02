@@ -16,7 +16,7 @@ location:
 url: https://culture.seoul.go.kr/festival/2026-hangang-summer
 source: websearch
 source_url: https://culture.seoul.go.kr/festival/2026-hangang-summer
-fetched_at: '2026-06-21T09:44:16+09:00'
+fetched_at: '2026-07-02T23:11:59+09:00'
 x_provider: exa
 x_query: 서울특별시 2026 무료 행사 신청
 x_confidence: 1.0
