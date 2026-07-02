@@ -12,7 +12,7 @@ from __future__ import annotations
 import json
 import re
 import time
-from typing import Callable, Protocol
+from typing import Any, Callable, Mapping, Protocol
 
 # 명시적 재시도 상태 + 그 외 5xx 일반화.
 RETRY_STATUS = {429, 500, 502, 503, 504}
@@ -47,10 +47,12 @@ class HttpError(Exception):
 
 class _Resp(Protocol):
     status_code: int
-    text: str
-    headers: dict
+    headers: Any
 
-    def json(self) -> dict: ...
+    @property
+    def text(self) -> str: ...
+
+    def json(self) -> dict[str, Any]: ...
 
 
 def _duration_seconds(value: str | None) -> float | None:
@@ -66,7 +68,7 @@ def _duration_seconds(value: str | None) -> float | None:
     return None
 
 
-def _json_body(resp: _Resp) -> dict:
+def _json_body(resp: _Resp) -> dict[str, Any]:
     try:
         return resp.json()
     except Exception:
@@ -89,7 +91,7 @@ def retry_after_seconds(resp: _Resp) -> float | None:
             parsed = _duration_seconds(detail.get("retryDelay"))
             if parsed is not None:
                 return parsed
-    metadata = {}
+    metadata: dict[str, str] = {}
     for detail in details:
         metadata.update(detail.get("metadata") or {})
     return _duration_seconds(metadata.get("quotaResetDelay"))
