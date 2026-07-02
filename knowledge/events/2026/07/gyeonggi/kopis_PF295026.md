@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 부천아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295026
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295026_260701_130923.jpg
-content_hash: sha256:2e1816ee3fbb825e7cb50c911308a223ef8accc786b849c74d4cf6dedc483c45
+content_hash: sha256:25a98deff1006572e9a90a80f96da2e77625e88436f0b5ccbc06a08fbfe83e87
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 박은경 피아노 독주회: My Beloved Chopin [부천]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

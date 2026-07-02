@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-02T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 보헤미안 소극장
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294728
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-02T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294728_260626_151356.png
-content_hash: sha256:b353827cdb929cef4b628d56dd23968eb522f4a691d126c4e7cbb83f15574502
+content_hash: sha256:6a5ce18254b03a156b39c4da6bd7c1e39736c7860fd7183c90efb34cde8def54
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # nib.archive 전국 클럽투어: idea of nib [광주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

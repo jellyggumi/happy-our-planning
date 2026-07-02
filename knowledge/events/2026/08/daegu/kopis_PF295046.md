@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-22T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 대구보건대 인당아트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295046
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-22T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295046_260701_140426.jpg
-content_hash: sha256:b0f0f4e255157f69a3a447c47829ca1288d10c47dc004593552e9bccd1b80323
+content_hash: sha256:2711ac83c393b36c217180d6d780ba042b7426e062b1bdca432492e6299a0c5f
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 우디 (Woody) 여름특별콘서트: 우디학개론 [대구]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

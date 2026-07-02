@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-23T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 숲세권 라이브
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295161
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-23T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295161_260702_143353.jpg
-content_hash: sha256:93c13d4ede70bf47aad69bf826ac7e81aba5846de39952554f3ad4fd3fe79fd0
+content_hash: sha256:c9796da5d633e3f3ef535d381546bb2b7172fc368402ea8d9445092566b73636
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 먼데이프로젝트X숲세권 MONDAY: SOOP, 이오늘 단독 콘서트
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

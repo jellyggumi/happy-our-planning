@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-23T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 세종예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294813
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-23T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294813_260629_140736.gif
-content_hash: sha256:aa488e21672d5b5e6612e1066a52f8c26b3a5ad328efe79656972f4bd3e7f5fc
+content_hash: sha256:7d0f5f475a10255dd5d2d6bea84835b17094ef402764e6185b1c62cb2f9c5452
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 국립심포니콘서트오케스트라: 차이콥스키, 교향곡 6번 비창 [세종]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

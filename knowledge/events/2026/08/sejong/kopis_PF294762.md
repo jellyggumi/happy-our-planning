@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-23T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 비오케이아트센터(BOK아트센터)
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294762
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-23T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294762_260629_112057.jpg
-content_hash: sha256:47ab37d9e2e902f4b637e6fcac3bb87477b12b404b2aafbf82efb152de334b12
+content_hash: sha256:e92dc0e61adf327871ea02cb2bc619dec6189228762f4557ddbb54c5251f1d00
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 드로잉 매직쇼: 어린이 매직 페인팅쇼 [세종]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

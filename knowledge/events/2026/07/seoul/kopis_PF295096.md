@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-11T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 콘서트홀 나누
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295096
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295096_260702_112814.gif
-content_hash: sha256:5ec16aa5759021ea2a4d5cdf86efd0776180c4d0666b15ac46cd3da4253b92e2
+content_hash: sha256:73190262d8234491dc6de54c8a0e41eb624346e226a6a09e15980ef7e64fcfd8
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 처음 만나는 클래식 (7월)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

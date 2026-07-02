@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-11T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 아지토 라이브 홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294967
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-11T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294967_260701_095020.jpg
-content_hash: sha256:db1c0329637bac2ee82028db0624a70923ffbb1f9184b3d0b63bfc81aff3d123
+content_hash: sha256:17d61624186a98359d10e7eb2cb24d6f24564cd9c0ac7a4de260999e3472e940
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # idol wave vol.25
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

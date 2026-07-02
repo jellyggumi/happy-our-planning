@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-28T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 소셜베뉴 라움
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294912
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-28T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294912_260630_102218.gif
-content_hash: sha256:54f2e14066cba77621781734144d57cbeca1d711ffd76d635238826a6b6b0349
+content_hash: sha256:653289749267433f373fc409f7c8417a1385e1b1fdf424c4b9d50a05b9a69157
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 라움 마티네콘서트, Hollywood & Jazz: Cinema Concert (7월)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

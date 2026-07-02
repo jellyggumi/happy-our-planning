@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-07T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 거창 수승대
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295199
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-07T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295199_260702_161223.jpg
-content_hash: sha256:cf645899484c424d08265b84f292c7a99a630a557854f4844d436d9726e2074e
+content_hash: sha256:2b6f14a6e72275657a9ba72d87b10880366fe31d455ce8514290ba8dfa4b64c0
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제36회 거창 국제 연극제, 이상한 나라의 춘자씨 (08.07)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

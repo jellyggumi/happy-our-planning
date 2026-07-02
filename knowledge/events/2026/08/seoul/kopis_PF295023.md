@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-09T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 예술의전당 [서울]
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295023
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-09T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295023_260701_130551.gif
-content_hash: sha256:2ced9179a8594c6a6014ba8b104977b2cacb0680ac4a5d21f77d724bc83e69a0
+content_hash: sha256:bb6069b1c2d7fa80e726134a5ce61203490ebb7f87f64591d50b43d96c9f1fac
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 박영희 피아노 독주회
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

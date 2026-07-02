@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-10-17T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 충남대학교 정심화국제문화회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294878
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-10-18T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294878_260629_162232.jpg
-content_hash: sha256:46d75b80f6e65ee6eef231bd7889686a2b37fa040319551409a2d21dd54471f5
+content_hash: sha256:d1c910185b23b3878c0388527d0fc63719f188d7b919a8cd5bf0218aacdb9bcc
+x_lastSeen: '2026-07-03T04:18:59+09:00'
 ---
 
 # 최현우 19+I [대전]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

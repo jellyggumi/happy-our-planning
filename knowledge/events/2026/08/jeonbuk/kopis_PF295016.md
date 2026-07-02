@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-15T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 더뮤지션
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295016
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-15T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295016_260701_120913.jpg
-content_hash: sha256:a0a02e70c12b94515b1475a489262b29274af1fbe834a0b3ceb81ac3d729fc93
+content_hash: sha256:b57246de3f619e9fdf833036da41334bbb852daf73610b2bc2fdbf442b7156fe
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 오월오일 전국 클럽 투어: SUNBURN [전주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

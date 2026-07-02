@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 서울주문화센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295038
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295038_260701_133637.png
-content_hash: sha256:8802313375963eb1426f21716e3b9b15681d6dab37b5f788dc5818c652127084
+content_hash: sha256:7c35952d9399e5219a162f18860e8dda41a1fa2a65f7279e09de751cd4fec8d5
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 광화문 그 사내 [울산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

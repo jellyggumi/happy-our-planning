@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-08T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 더뮤지션
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295149
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-08T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295149_260702_141145.gif
-content_hash: sha256:2a57d93d7a3320da397077470b3dab810470cdd47030176f79daac5b8c6e7b9b
+content_hash: sha256:57a6bd5687a9ffb1cd82c377df44d421f4c582b75d9e17ceaef9ff138a2c92c0
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 너드커넥션 클럽 투어: 파도의 고점 [전주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

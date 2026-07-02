@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 남양주 어린이비전센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295140
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295140_260702_135247.gif
-content_hash: sha256:2707c5a00f687cd0787cdf2f8190eb20d0ef32082aa3c647e65dc5d03779d41b
+content_hash: sha256:4d8a519d9c85dbca062e92521a0d384fd5405ae99f7215f2ba803d2b8a86ae68
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 명랑동화뮤지컬, 삼양동화: 춤추는 신데렐라 & 아빠돼지 삼형제 [남양주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

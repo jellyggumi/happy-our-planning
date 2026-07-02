@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-10T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 송도 건원테크노큐브
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294773
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294773_260629_120058.jpg
-content_hash: sha256:f517dd0b50aebbea63febb51b0571ea67759c4a456593c24c7c7740035605fa8
+content_hash: sha256:95703655c97bb45081c2c9788ee2fe4d947db45c96ee292cb43f3addda55cae5
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 호랑이 담배 끊던 시절 [인천]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-01T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 롯데마트 [월드컵]
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295103
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-31T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295103_260702_121218.jpg
-content_hash: sha256:bf3eefa67381ddeef202a681c349548a1fdd0196c1445faea8703ed6a4e7c22e
+content_hash: sha256:491764d1f40a4c6e60d5376f8a514b3dcf929f5f0032876bfdb44ab9c55d4b9b
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 피터팬 [광주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

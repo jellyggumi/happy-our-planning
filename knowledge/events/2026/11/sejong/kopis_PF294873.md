@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-11-14T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 세종예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294873
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-11-14T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294873_260629_161049.gif
-content_hash: sha256:0d1939802dbd60e1844a34a8dd0be90e879f9ac03b1c395d351b509d4d4bed91
+content_hash: sha256:0970826b7c6705dc5c59b0efa8108b2b1bf7e06360f8aa0a36972dad0165a7fa
+x_lastSeen: '2026-07-03T04:18:59+09:00'
 ---
 
 # 국립심포니콘서트오케스트라, 드보르자크, 교향곡 9번 신세계로부터 [세종]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

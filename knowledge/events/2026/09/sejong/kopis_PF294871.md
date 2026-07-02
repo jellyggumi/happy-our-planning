@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-20T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 세종예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294871
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-20T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294871_260629_160432.gif
-content_hash: sha256:17be3f487c453720ae5d4f3a9c85d95a48018624feda5eace7f3d6356d0e4d05
+content_hash: sha256:8cad0ebed507e44d6b607b47f8026a20c911ab1eee11239f7fa4d4ef73f572e6
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 국립심포니콘서트오케스트라, 라흐마니노프, 교향곡 2번 [세종]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

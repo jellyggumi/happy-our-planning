@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-08T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: DSM 아트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295120
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-08T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295120_260702_132021.gif
-content_hash: sha256:fbbd64ad9c2671675ff015d15403463f55f6484fae17987fa21d42963a19d4b3
+content_hash: sha256:4bd58e032b08d25bf88cf3d8cef90cbce1505ec5646ff2fb18e378570db05014
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # FOCUS in LIVE: 서울
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

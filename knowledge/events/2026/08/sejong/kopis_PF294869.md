@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-27T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 세종예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294869
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-27T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294869_260629_160230.gif
-content_hash: sha256:3c5efbdbf3e0ecf71dc2d0d58819b6a0e21e22686d77ffc5a877565d545da48c
+content_hash: sha256:9e698e9cd19eb7532e2151520b0cc0cf38133c7cbbcb4c18be7d0ea7211328cf
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 국립심포니콘서트오케스트라: 브람스, 교향곡 1번 [세종]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

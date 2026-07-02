@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-01T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 거창 수승대
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295181
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-01T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295181_260702_152426.jpg
-content_hash: sha256:94c5620483d7b03c5c582cd480a02a1c3ddec835f6fbd1269187fda62dc24cf6
+content_hash: sha256:217fab1e7bfffceb26dfba7546eebfb026bf3c74cab65b2144215ccd8d445859
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제36회 거창 국제 연극제, 찔레꽃 (08.01)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

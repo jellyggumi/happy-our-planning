@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-26T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 낙동아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294704
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294704_260626_134104.jpg
-content_hash: sha256:93bbf94b2c0cf97747cf3289489734474cd2815b1deee063721fddddc69692e2
+content_hash: sha256:8ce0776f613c76f25e1b497809dbc5e221f99d80f7d048150d45f293628a4342
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 모차르트의 마법 바이올린 [부산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

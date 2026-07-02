@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-10T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 세종문화회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294674
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-10T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294674_260630_153559.gif
-content_hash: sha256:c0fd3c34b88c55f752f07ee2006c0af1d87a1a3c675e1940eb8e87425a6c871f
+content_hash: sha256:13b6f7e59cb3bf00428d4be75d01aba7385293e5da21325f8eec0344cc1f5cc1
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 모스틀리 첼로 페스티벌 인 서울, Path Ⅰ. One Way Only
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

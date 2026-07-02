@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-18T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 피오레아트앤엔터(피오레움)
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295050
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-18T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295050_260701_141416.png
-content_hash: sha256:e8ebf8dcc04ce1c839be0e0aea2749bc2ebaa10cbfe40d83a54fa40257e6311a
+content_hash: sha256:31c31666042539350a2ba51779463027485520abdc466bef2997f68051cf2f54
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 피아니스트 손민영, 88: The Essence
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

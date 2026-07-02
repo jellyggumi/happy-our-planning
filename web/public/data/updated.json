@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-02T23:26:52+09:00",
-  "total_active": 505,
-  "archived": 3,
+  "generated_at": "2026-07-03T04:19:01+09:00",
+  "total_active": 10,
+  "archived": 498,
   "by_source": {
     "tourapi": 3,
     "kopis": 501,
@@ -10,7 +10,7 @@
   },
   "freshness": {
     "tourapi": "2026-06-20T23:37:23+09:00",
-    "kopis": "2026-07-02T23:11:57+09:00",
+    "kopis": "2026-07-02T23:14:22+09:00",
     "websearch": "2026-07-02T23:11:59+09:00",
     "example": "2026-06-20T03:11:00+09:00"
   }

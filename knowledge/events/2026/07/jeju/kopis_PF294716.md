@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-12T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 서귀포예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294716
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294716_260626_142116.jpg
-content_hash: sha256:539db5bb4b88a16321ee3f0bc1614bedfb99bb881db924a21973e655e29da0a9
+content_hash: sha256:492d0041770324692acb8f745b7d23a8f0a3456efd7001f2b86fe692d8ef4eba
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제4회 제주 국제 무용제 개막공연
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

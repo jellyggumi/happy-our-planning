@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-19T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 부천아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294996
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-19T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294996_260701_105217.png
-content_hash: sha256:0a310ea8c91a6187a13e220ac4283b2f06ec5f33960bb4ffb65f62124dd95f9e
+content_hash: sha256:118a8e9ce05cdb16cd915e2c0b13fc0c99fc2cee53a7a0ed6026d15232b78c50
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 무지커 영 아티스트 콘서트 [부천]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-20T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 군산예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295021
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-20T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295021_260701_130403.jpg
-content_hash: sha256:dc409d594da09fb5c0dcfe2e38585849b9120732dd60d0b4a76c7946534aff58
+content_hash: sha256:d87b9311bd994bacd6d10ff9c6be22ee8ed8adfd02d3dd857957de3e561aa5a5
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제83회 군산시립교향악단 기획연주회: 납량특집 콘서트
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

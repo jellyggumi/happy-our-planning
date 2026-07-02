@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-22T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 보헤미안 소극장
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294710
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-22T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294710_260626_135545.jpg
-content_hash: sha256:ad94e9dffc2d420855672a40353ecbf49d242de1378768879f2ecea5a9741df7
+content_hash: sha256:6af33d5006f1232f2dbcead9c247a9dfc391147617390b0f385a8e31020b487e
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 나상현씨밴드 클럽투어: 여름빛 [광주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

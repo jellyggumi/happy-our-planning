@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-11T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 나주문화예술회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295083
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-11T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295083_260702_105636.png
-content_hash: sha256:4e44404dab25764b03de2e51c3bb38f3240af8980ecf9f67d3fec8220cbda57d
+content_hash: sha256:11027b593cbccd9672dbde15c7197649195b78c5352b3b172998ffda6693c767
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 구미호 [나주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

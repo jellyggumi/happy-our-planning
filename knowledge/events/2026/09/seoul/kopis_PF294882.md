@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-05T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 블루스퀘어
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294882
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-05T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294882_260629_163027.gif
-content_hash: sha256:603cc169a281cf1f1747808500f6eadfe9a586b17fb15d4146a47c7ff85987f6
+content_hash: sha256:114558578595437b318779ab31943caf83fd507c2b1e78142f4b1aa4c9fdef5d
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 더 스카웃: 다시 태어나는 별, 이승철 그리고 다시 태어난 별들
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

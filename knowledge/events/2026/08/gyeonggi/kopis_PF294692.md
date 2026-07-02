@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-01T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 안산올림픽기념관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294692
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-01T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294692_260626_124555.jpg
-content_hash: sha256:1df2e977ed06332bb00333c6159649c0d22aef1b914e8dbd34246f1a23855fc7
+content_hash: sha256:78b0597b08f3b42f5245285935448d38ab4e87497f5875b4af5f63eb39123ff9
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 누가 내 머리에 똥 쌌어? [안산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

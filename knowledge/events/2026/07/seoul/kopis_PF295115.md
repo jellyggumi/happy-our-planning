@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-09T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 어피스어피스
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295115
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295115_260702_130915.png
-content_hash: sha256:a555f9375098d54ee047edcd7acd4aff9b595dd3fd73ed64fd5b3c6d99c0f09c
+content_hash: sha256:b823033b1f53782114db92422a1abceb67a12ce02029574cb2862ffa1ff6f5cc
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 갈라테이아의 파도
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

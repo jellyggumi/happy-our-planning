@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-16T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 락왕
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294636
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-16T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294636_260625_141104.jpg
-content_hash: sha256:4ba15aff2835dce150a8c1dfe8eba28484cef6f4d8bcb9efd4b9faff01217097
+content_hash: sha256:eadff921c73b55526fdb1c51092c74429ee37dc3aed320469e436351bbf69450
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 나상현씨밴드 클럽투어: 여름빛 [대구]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

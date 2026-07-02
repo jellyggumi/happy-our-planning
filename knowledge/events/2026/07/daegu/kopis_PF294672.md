@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-12T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 수성아트피아
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294672
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294672_260626_105811.jpg
-content_hash: sha256:296676258a1bdfbb3f638fa903c885f921d04e2303b8cad8708d0c567e871ee5
+content_hash: sha256:a4d014dcb83df3c76b8dc09d122b9c0f4b9bed3c3041ebf5e7ebfcc798d91704
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제47회 아스콜티 코리안 챔버 오케스트라 정기연주회 [대구]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

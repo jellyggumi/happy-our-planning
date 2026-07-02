@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-11T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 현대카드 언더스테이지
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294933
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-11T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294933_260630_111040.jpg
-content_hash: sha256:bfb925a700552dacb2f4ea84cffb243e57dd1bc9db1f6eccf5e19ce09751b45c
+content_hash: sha256:1bb4fe2362ba020a9a80056e8b649a76c56d60fd58c5afcc6384ad5e1905224e
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # Units vol.1
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

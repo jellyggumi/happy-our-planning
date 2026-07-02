@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-22T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 김해 장유문화센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294669
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-22T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294669_260626_105016.jpg
-content_hash: sha256:1077439a3d975cc5041ac81f56548b26eb4c4d10d3007841f55f94d61f39717a
+content_hash: sha256:ae05453fee58ecc4a2efd42cfc5111caddeb41473d8771e36609524de2511c89
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 신데렐라 [김해]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

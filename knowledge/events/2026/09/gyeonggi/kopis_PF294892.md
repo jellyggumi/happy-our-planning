@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-16T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 수원SK아트리움
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294892
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-16T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294892_260629_165015.gif
-content_hash: sha256:b2b3b624014bb92f4e4b8ba705e8c685adfbbda525a372d551dae9a921d66a35
+content_hash: sha256:5f8de8e52a7732eaf8f6b132316c6cf63a5ccb664f7498c7e83c2ebb62a6b5fd
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 살롱 드 아트리움 시즌 Ⅵ. 바실리 칸딘스키 색체 연구: 동심원이 있는 사각형 (9월) [수원]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

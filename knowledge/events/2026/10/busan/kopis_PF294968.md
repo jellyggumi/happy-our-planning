@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-10-02T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 삼락생태공원
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294968
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-10-04T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294968_260701_095220.jpg
-content_hash: sha256:88906f6d854cb6c22a7c83c8b6eb5f4152fa4024cfb1d5788e5693bab6dcf82d
+content_hash: sha256:8f2a3edcf79466daebb06af3dd932f4109adb8ad7bd61c03877ac6df587b5316
+x_lastSeen: '2026-07-03T04:18:59+09:00'
 ---
 
 # 부산국제록페스티벌
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

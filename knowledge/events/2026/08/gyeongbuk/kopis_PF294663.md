@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-22T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 천마아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294663
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-22T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294663_260626_103349.gif
-content_hash: sha256:ab61b41e496851f6a75295371ae3dd4cd901c4c24584186be30573453ddc6123
+content_hash: sha256:88e61e9164b38d321a0e3fb0e4ffe26a831aaf8141f95dad15f12fdd1701e107
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 슈퍼디바 적우 콘서트 [대구]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

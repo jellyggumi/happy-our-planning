@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-01T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 영도문화예술회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295061
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-01T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295061_260701_145534.png
-content_hash: sha256:6becadd25a34a16eeb85f8195e13a6b98462dee4e3f975b723474723d75165bc
+content_hash: sha256:8b0c622419135eeab474d9f1ec758ab89fd400349b24ed91b1cd4d096151cd34
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 우디 (Woody) 여름특별콘서트: 우디학개론 [부산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

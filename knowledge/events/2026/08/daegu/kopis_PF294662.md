@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 비원뮤직홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294662
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294662_260626_102559.jpg
-content_hash: sha256:27e1d76ede7495b6c0fd0c0112ebb9dce2eed59c2fe51d24e311bafd1b12c302
+content_hash: sha256:fc4a38adc0d4374bf611fdc2f1f12d6682382b8b3f89e4e87219b49a66c03e1d
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # WHAT IF 콘서트: 예술가들의 대화 [대구]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

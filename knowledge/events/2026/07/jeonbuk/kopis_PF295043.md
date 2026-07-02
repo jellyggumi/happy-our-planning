@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-18T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 완주향토예술문화회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295043
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-18T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295043_260701_134839.jpg
-content_hash: sha256:f451229fe81c353e6e1f825ffda863ce4ddb1b7ab60996892f8112b775c2d816
+content_hash: sha256:f9c0da311d4c7ea65ddcf4591e07070d3e8adb397d7826f173994027af66bca4
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 손 없는 색시 [완주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

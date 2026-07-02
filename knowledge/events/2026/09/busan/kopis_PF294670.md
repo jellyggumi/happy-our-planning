@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-09-12T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 부산시민회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294670
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-13T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294670_260626_105716.png
-content_hash: sha256:8969334901133c3f865b20a9dfb1f8b5ab33c4859a7c5d837e555b32ff1245da
+content_hash: sha256:2f0353557e8a32158de03b52c08b2f4e97212c0f1da8a8517282686813b63910
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 최형배 마술사의 매직문: 달빛매직쇼 [부산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

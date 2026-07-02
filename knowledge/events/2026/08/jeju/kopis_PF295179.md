@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-29T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 2D Hall(이디홀)
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295179
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-29T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295179_260702_151604.jpg
-content_hash: sha256:f3e5a30b83140ae2f7609085c04da4d88edabac23476ad72e882a4e09d6ed9e1
+content_hash: sha256:e906309d0796c4621a3123cc4d9de6b10144cd19d8aec2d1896e60e925f7d9ec
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 오월오일 전국 클럽 투어: SUNBURN [제주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-18T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 레미어린이극장 [울산진장]
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294836
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-30T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294836_260629_144413.jpg
-content_hash: sha256:7b69113a9046d2dfc8f39a0004732f7068a1aec37023356b0c36a8f5d4f44503
+content_hash: sha256:b11536041a3a07bc77097c8bc4d69e705731f4afeb30b35f610a035c60a5938f
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 인어공주 아리엘 [울산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

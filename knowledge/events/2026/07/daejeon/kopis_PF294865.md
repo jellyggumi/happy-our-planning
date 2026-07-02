@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-04T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 대전시립연정국악원
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294865
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-04T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294865_260629_154818.gif
-content_hash: sha256:dc2501dbaa558257995653ca638a5ef4e0e4c6e023c072213318a98500eb4f28
+content_hash: sha256:88ed52bd2a519fb5afc3f7f429eca7221ee6d15ebe2a9c36a3c57cebd4f34826
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 앙상블 솔리 데오 정기연주회: 피아졸라의 누에보탱고 [대전]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

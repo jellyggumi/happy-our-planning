@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-31T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 선릉아트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294652
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-31T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294652_260626_095241.jpg
-content_hash: sha256:b690cec30025a067f9b91382e30575ad27bb3b79a6e834bee286f2ee6497b197
+content_hash: sha256:cb3e9bf26928fbf964c1982ce34d148d1fc3e7e868fe6c7e7973052bfb5058dc
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제3회 복원음악 기획공연, 복원음악 렉처콘서트: 추정현의 가야금, 악흥의 순간
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

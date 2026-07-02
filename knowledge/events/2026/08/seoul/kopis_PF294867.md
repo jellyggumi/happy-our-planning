@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-08T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 소극장 창덕궁
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294867
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-08T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294867_260629_155333.png
-content_hash: sha256:44331084397ed934fc378640e673f9fab58ec5d9e282de63a6d7f120770cc380
+content_hash: sha256:9c23f7c2738342a939124ef93a93a098c5734d07d8eab7767bbb9ad2b54c284e
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 매직랜드 하이라이트쇼 [대학로]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-09T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 영산아트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295168
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-09T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295168_260702_144359.gif
-content_hash: sha256:a597c494f75589e6772a44501dfaa9c09acb647a6fa0c9e0f8e7ded6e2dcac9a
+content_hash: sha256:24b6b638155d98f3db940f5f4f0dfe11d6b1638b7b0f136dade058582acb822d
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # Present Flute Orchestra 창단연주회: 첫 번째 선물 (The First Present)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

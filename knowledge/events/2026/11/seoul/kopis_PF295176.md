@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-11-05T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 롤링홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295176
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-11-05T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295176_260702_150648.gif
-content_hash: sha256:5c30fb7b479814f0608832ec8d65ddb8ceaf0221e85608bae746cc0ecd379f71
+content_hash: sha256:a235225df8f8088c890484c10e439ca0cd48dc4ce91c400b6f13d5c97eaee8cb
+x_lastSeen: '2026-07-03T04:18:59+09:00'
 ---
 
 # 제5회 고3형민 신곡 발표회 및 국악 공연, 풋풋쇼: Fresh Show
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

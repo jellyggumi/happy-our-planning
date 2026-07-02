@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-29T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 금정문화회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294638
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-29T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294638_260625_141735.jpg
-content_hash: sha256:cc9fff7fa1970aa270c6fa833823e160063730804e27e3420e6fafea19a1300d
+content_hash: sha256:125b2718f0b8245467a0e03780607a02d81b03f94eef7873e23f81f6abbc2ed3
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 금정클래식위크 3rd. 울림, 라이징스타: Piano 김송현 & Viola 신정안 & Cello 이강현
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-05T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 대전평송청소년문화센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294922
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-05T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294922_260630_104608.gif
-content_hash: sha256:5b67b2b287e146469cafa5fd6e2470d499df0096087609e643840ebe093c007f
+content_hash: sha256:3557de0ee2f482445fafe0830cc8be0d27ba9f484132996e9af848eb354e5aa1
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 프린세스 공주 [대전]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

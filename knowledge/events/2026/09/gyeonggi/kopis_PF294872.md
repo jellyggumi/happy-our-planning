@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-10T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 하남문화예술회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294872
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-10T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294872_260629_160754.gif
-content_hash: sha256:89b3317c9cb61658fffa9d7213751d37eec7639f9ff9312cb63ee68e41966e53
+content_hash: sha256:b6d9b47ba97924e9d80365b2d5a3c3935d720fdf46e7265ac8d228b43903edcf
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 마티네 콘서트, 미술관으로 간 클래식 #3. 미국 [하남]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

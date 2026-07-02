@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-31T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 밀양아리랑아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295158
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-01T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295158_260702_164452.jpg
-content_hash: sha256:26f2c6d75894b8156e369e2a41ca4563e4236ad1ca6de29feabff01dc5311589
+content_hash: sha256:96aa7cad6665ce8f0d909155547f5f5f31ff61d3e516f40b84e5c595bac35fb4
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제26회 밀양공연예술축제, 분홍립스틱
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

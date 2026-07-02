@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-22T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 소향씨어터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294749
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-22T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294749_260629_105703.jpg
-content_hash: sha256:0156846043566f8497ebd6c7f36ed423f81af198d1e0f08e91a831a37c577712
+content_hash: sha256:f71a90c01d340ec9ac7d6be3f74b14dc265b12da07fabad487cdac4d1422fcca
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # HAHA FAN CONCERT [부산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

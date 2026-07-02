@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-06T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 계명아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294956
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-06T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294956_260630_133353.gif
-content_hash: sha256:84f578495be5833cb165347f71fd161b05932e3ea3190dc181fc4c0d65024837
+content_hash: sha256:662962305012940d15de744587a88deebe6a5e54cd5e4c430f24a85b342ff6a6
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제20회 DIMF 어워즈 [대구]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

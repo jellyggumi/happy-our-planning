@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-12T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 안성맞춤아트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295164
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295164_260702_143727.jpg
-content_hash: sha256:f9bf7171e2791cc774e70f8dceddc223f6a31a3c81fa776c861c25b5330d3d11
+content_hash: sha256:82369f1190c622ef7248ac31f52592b5a511f1dab68da6e8a992ce3c5f9be878
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 안성맞춤아트홀 문화가 있는 날: 아트-데이, 영지 (영상화)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

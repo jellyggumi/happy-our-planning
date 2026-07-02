@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-14T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 부천아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294779
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-14T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294779_260629_123446.jpg
-content_hash: sha256:16e0be1328450db014c9bd3d02aa9157d0db5109b04a77ff22e1255fa025505c
+content_hash: sha256:678c6f3d922e6a4c8fdd999dc6d81c041e64d004c937ba8a2c46da5222dd34f0
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 부천필하모닉오케스트라, 바그너 니벨룽의 반지 하이라이트
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

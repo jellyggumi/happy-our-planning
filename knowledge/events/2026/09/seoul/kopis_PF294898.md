@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-14T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 금호아트홀 연세
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294898
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-14T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294898_260629_171025.gif
-content_hash: sha256:297242e5cf80dbfb4c06d8f14e8adaa7fbc8efaf14259332cbc50a9d40e3f2c3
+content_hash: sha256:b95e1b5eb3728646d48180b10b3833d6031026484af8b3fd5ff4d6d931e72eeb
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제8회 어텀 실내악 페스티벌, 소리의 결: Sound in Motion, 춤의 얼굴들
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

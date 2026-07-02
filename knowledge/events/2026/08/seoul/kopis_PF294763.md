@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-04T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 창작플랫폼 경험과 상상
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294763
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294763_260629_112638.gif
-content_hash: sha256:0dce2bcd93531395dbd5131713e3f6ddafbee4e9b210e6eaa9daa7345779a301
+content_hash: sha256:361af9cb4d5b45dbb01633041c60e98cd39fbeef2ee6cf5c085859a2cdada779
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 개들이 짖게 내버려 둬라
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

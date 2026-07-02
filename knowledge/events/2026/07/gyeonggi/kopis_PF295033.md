@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 하남문화예술회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295033
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295033_260701_132351.jpg
-content_hash: sha256:a8fb846399d7f4a6d9a280d5ca77158e30b40b68c8da748ae4b7d8d2df0038bd
+content_hash: sha256:f95ab0d5d5bccfcfa479b71416760b32e5abc117c411b505cc4818a8dbe1b0ab
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 버지니아 사건파일 [하남]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

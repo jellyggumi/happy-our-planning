@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-18T00:00:00+09:00'
-status: archived
+status: Scheduled
 attendance_mode: Offline
 location:
   name: 세종문화회관
@@ -16,11 +16,10 @@ location:
 url: https://www.kopis.or.kr/por/db/pblprfr/pblprfrView.do?mt20id=PF200001
 source: kopis
 source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF200001
-fetched_at: '2026-07-02T23:11:57+09:00'
+fetched_at: '2026-07-03T04:18:57+09:00'
 end_date: '2026-07-20T23:59:59+09:00'
 image: https://www.kopis.or.kr/poster/PF200001.jpg
-content_hash: sha256:1ae5ad9b73f6ceb672d11280d51d0ce54c4a6fc0032eca17206f6bf195cc3b03
-x_lastSeen: '2026-07-02T23:14:22+09:00'
+content_hash: sha256:8cc806926f6fcb787e0a8126ebc48ee9581cd73330c1dc2df9a413bb26d0f84b
 ---
 
 # 서울 여름 클래식 페스티벌

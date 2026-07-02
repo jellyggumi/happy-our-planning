@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-17T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 평택시남부문예회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294794
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-18T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294794_260629_132556.jpg
-content_hash: sha256:659b2792b75c70c25d88dc70705c9f4bd65255aa5db762570529ac7a36a933d9
+content_hash: sha256:5f89fae5ae83d4d0eade19f52eb59ef85c56525541ee64fdff898b69c8e86401
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 아시아국제피아노 아카데미 & 페스티벌 (AIPAF) , 교수연주회 [평택]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

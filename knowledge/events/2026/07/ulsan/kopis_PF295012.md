@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-12T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 울산북구문화예술회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295012
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295012_260701_114052.png
-content_hash: sha256:78c4b33a5750c9b16a5cfd3908da206e5a71e8f06acc927e8fd8546bb69b4f5a
+content_hash: sha256:6a5ba83e7e91af7ecbe4d562ca2cc631978cb23fa2b556dd42b3e7c097db0f88
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 환승연애 더 클래식 [울산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-26T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 평택시서부문예회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294708
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294708_260626_135447.jpg
-content_hash: sha256:600d4316e06dd6398c9a6e1fe42df81d26f9deadfd2f66281668a12bcc7c96e8
+content_hash: sha256:f56939042b3a8ce9ae1c3f8cd4cf2cc57357460f9153e9c9f5c2325148605c18
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 매직콘서트: The Final Illusion [평택]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 금사락
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295045
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295045_260701_140136.gif
-content_hash: sha256:8f8aaacea0ed0d74827cd24f0b9146ca7d0395d42276d07def64ba9f3d977489
+content_hash: sha256:b873898983a4558396d1ff490dd04545981337b5687cd37f2c68ba390217f75f
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 너드커넥션 클럽 투어: 파도의 고점 [부산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

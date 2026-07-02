@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-26T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 거창연극고등학교
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295196
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295196_260702_160657.jpg
-content_hash: sha256:62803c8ffff0006e7cb90c0128c1a7e7fd5bd3c251ea4df7e864c8c7d25e816c
+content_hash: sha256:9aa1c1c82d10092b5d3e4f2f79fd22e437ed9f957eabe88626dc32a44ed0d643
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제36회 거창국제연극제, 마당놀이 동계 (07.26)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

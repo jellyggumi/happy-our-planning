@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-22T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 소극장 성북오름
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294985
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294985_260701_102757.jpg
-content_hash: sha256:8006b173d128b8442419612a535d979e2ec5e7ecfdc48296b76b2eb9532d9763
+content_hash: sha256:e61b9156b468e8564ae6a43203a5fa03977238e3d4d9b2739233ec65826c5142
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 코다 [서울 성북]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

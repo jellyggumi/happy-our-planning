@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-17T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 큐브컨벤션센터(CCC)
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294941
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-17T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294941_260630_113140.gif
-content_hash: sha256:74667834f8a87c8f73f779c88709d5bfb2eac9c498334694cc4d90e28450a6cb
+content_hash: sha256:51bd1458864a762327e59d333a8be9eb7812543a550be44813bb5ed23acbcb4c
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # JACOB 1st Asia Showcase: More Than Words Tour [서울]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

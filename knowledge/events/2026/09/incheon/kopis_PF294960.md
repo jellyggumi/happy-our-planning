@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-26T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 인스파이어 엔터테인먼트 리조트
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294960
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294960_260630_134909.gif
-content_hash: sha256:174d0094e0e5765c58ff6c8b3a231b3c3dd859d23fac17cecf111e0c318e3a37
+content_hash: sha256:93cce5960abeb03f9dbcc8221141830ee747fbf3c508f8c3016c6d1248420789
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # TAKUYA KIMURA Live Tour: Checkpoint in Seoul
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

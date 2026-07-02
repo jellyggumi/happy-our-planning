@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 청라복합문화센터 블루노바홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294798
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294798_260629_133715.gif
-content_hash: sha256:622bddb4da2fcdf03635fd679348c2a7ec340c0f35581153966868d4a3675577
+content_hash: sha256:29f9bd458b20ea659c895ee7f69669b02d380cfe90c966243652e2a6559d03f1
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 판소리, 재즈 청 [인천]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

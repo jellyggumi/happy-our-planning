@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 헤르만아트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294833
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294833_260629_143842.jpg
-content_hash: sha256:a6f0c8872001e01ba8241aebcaeb2b3841b26803e85d025a4ccf7305761061aa
+content_hash: sha256:6c48b26fc8e331e6f2e5d66095e7908deae6f14d8fffaf5863ee0dc9f2e5cd5c
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 드로잉더뮤직 x 헤르만아트홀, 이윤후 플루트 독주회
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

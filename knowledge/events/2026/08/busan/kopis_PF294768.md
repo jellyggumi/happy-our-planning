@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-15T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: (재) 영화의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294768
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-16T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294768_260629_113539.gif
-content_hash: sha256:4dc765a6bcceb64a5196ac4a6447a98d932e62860e42f2a5854c590c0a314939
+content_hash: sha256:b1e422fde41ede2789f9c3565ab828861941955b60a54d7d4b3724bd5963a765
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 말린 고추와 복숭아향 립스틱 [부산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

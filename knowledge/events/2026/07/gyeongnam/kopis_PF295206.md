@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-26T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 밀양아리랑아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295206
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295206_260702_163529.jpg
-content_hash: sha256:322f011f98eb57df621b28e95b3dfe2020220ed44472d27a6faa5316fb11c2d5
+content_hash: sha256:6f4235f699d0fb687bee74ded6d8c48a726d650856e5cd078b10fdbf25bcddfb
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제26회 밀양공연예술축제, 미세스 마캠
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-06T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 롯데콘서트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295030
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-06T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295030_260701_132105.gif
-content_hash: sha256:cd108b6c7b4e3ebe1da8ee3a0b8d727dfd6cab3bf065fe75eb260a922324b17c
+content_hash: sha256:d77f9c8bc2a1268c1d2d516c2bfc465b3be736b0e4e6f13ddb3743009f570b55
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 김세현 피아노 리사이틀
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

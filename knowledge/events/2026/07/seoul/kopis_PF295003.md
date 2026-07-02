@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-30T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 영산양재홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295003
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-30T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295003_260701_111541.gif
-content_hash: sha256:b1e10628f7e82530220cab887d2e0ce301e9472fde1ad15cafc0d4811b14aa5c
+content_hash: sha256:357d649674431a130c5ac226183f397acd82122b75a2d5b94e1ec54c01d4679b
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # The Unison: Piano Ensemble
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

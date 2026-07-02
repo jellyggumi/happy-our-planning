@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-29T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: KT&G 상상마당 [춘천]
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294721
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-29T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294721_260626_144209.png
-content_hash: sha256:25e92a8986e8e3654422badc4a924fd4da5d02ab28b9f11fe0fa6c032c49a2f9
+content_hash: sha256:a4f9cbc7d75a636bd5f72d6c0d1fa9c3e147acd088366b047629fe09e244b30c
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 나상현씨밴드 클럽투어: 여름빛 [춘천]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

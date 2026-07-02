@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-12T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 예술의전당 [서울]
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294875
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-12T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294875_260630_151412.gif
-content_hash: sha256:4bb65edb852f6dee4cf57ea0a8c2bc1ed55ef28aabd6e73cd5ecc35b66047bff
+content_hash: sha256:234edaf41f3f6b1ca3e3419fc89a06151c4e63b2cf544e6308f9fd0cf1ab759b
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 모스틀리 첼로 페스티벌 인 서울, Path Ⅲ. Merging Point
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

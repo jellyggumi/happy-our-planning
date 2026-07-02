@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-07T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 하우스오브베르
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294905
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-07T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294905_260630_100152.png
-content_hash: sha256:d3db6e38c6a98d7f20c3a895ef554d556a14ee749dd6df9f654f661394ef5187
+content_hash: sha256:42875b3e813b5e27018cd658d5aeb4f745bb69fc47d77fdd9ad05f5086fcfb62
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 부산 원먼스페스티벌, 우리동네 문화살롱 페스타 7th: 이야기가 있는 금관악 Modern x Jazz
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

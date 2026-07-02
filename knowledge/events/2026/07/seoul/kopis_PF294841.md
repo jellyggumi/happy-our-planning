@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-11T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 우무지
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294841
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-11T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294841_260629_145900.jpg
-content_hash: sha256:dab9908cd85544aa744ba4441cf121b3ee6745a091fc6bfebaff0a59cb62836b
+content_hash: sha256:d8f12bd0264980b22417ad7668d31da6669afaecc89ff25829d3773bac642f66
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 단추절: 해리빅버튼 15주년 기념 공연
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

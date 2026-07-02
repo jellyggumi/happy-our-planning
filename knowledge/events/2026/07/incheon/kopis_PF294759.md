@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-19T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 엘림아트센터
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294759
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-19T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294759_260629_111553.gif
-content_hash: sha256:ed8c37546cf9969c2781ff10aefc52e38a0797524977ad07245294175b32ec8d
+content_hash: sha256:bc6d62f0acaa03cc92eabacc97420d0a03ee2e1d723a2bc92b43c4a0a4a8afc4
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 선데이콘서트, 엘림 리사이틀 시리즈: 이정윤 첼로 독주회
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-04T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 창작플랫폼 경험과 상상
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294689
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-05T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294689_260626_120603.jpg
-content_hash: sha256:ab20778c94c57bf5149102e25bd2a77119036f93de8384f8995a54b53959f46f
+content_hash: sha256:08cab622fa21bbde64feaea40ec1c1ec034f26d17a336c4995e788f2f043e905
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 완벽한 타인
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

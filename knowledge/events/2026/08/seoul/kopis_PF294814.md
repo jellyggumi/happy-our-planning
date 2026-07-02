@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-08T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 노원구민의전당(구. 노원구민회관)
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294814
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-08T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294814_260629_140736.jpg
-content_hash: sha256:e7db4e50c36abffd6c93bdd19e1befd1e154509567985777cf1fbbc8b94feb74
+content_hash: sha256:734254e749c66b958d44bd9de96e4caf6e2ee511a3c4867b05398f45cd6f818a
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 신데렐라 [서울 노원]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

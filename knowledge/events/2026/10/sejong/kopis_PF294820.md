@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-10-16T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 세종예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294820
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-10-16T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294820_260629_141944.gif
-content_hash: sha256:5d772c929dfc7f19681db4ac992819cad5ef122160c5c5592e890eefe195bec9
+content_hash: sha256:b7744e659fefe542c69817a6020cf62cb7eb1a7ffad87548c9f10c3c7a09e5a8
+x_lastSeen: '2026-07-03T04:18:59+09:00'
 ---
 
 # 국립심포니콘서트오케스트라: 말러, 교향곡 4번 [세종]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

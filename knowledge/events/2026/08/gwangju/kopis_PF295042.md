@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-08-22T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 전남광주통합특별시 예술의전당 (구. 광주예술의전당)
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295042
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-23T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295042_260701_134835.jpg
-content_hash: sha256:6cde953c265fa0c03572f494563279a5626b4eaf5ac1a9f8ff8171f8507fc74d
+content_hash: sha256:86610f9553b87c604b4d886b8e6d35da9d75b96525d6e42f8fd9347aa3b88300
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 무등산호랑이 연대기 제2편, 팥죽할멈과 호랑이: 호랑아, 나랑 놀자 [광주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

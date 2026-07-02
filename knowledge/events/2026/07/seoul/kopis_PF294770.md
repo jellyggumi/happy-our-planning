@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 무신사 개러지 (구. 왓챠홀)
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294770
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-25T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294770_260629_114701.jpg
-content_hash: sha256:fca6f70e0564f5614ea82ef2d5dfbb8282b4a474cb14f72fb7ecbb6464b3c790
+content_hash: sha256:9e66493700b7e49cbd7ffecedb1bcef9ef87c3ef81e169b808234835c5a501f2
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # CHOROK: ZENE THE ZILLA 1ST CONCERT (초록: 제네 더 질라)
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

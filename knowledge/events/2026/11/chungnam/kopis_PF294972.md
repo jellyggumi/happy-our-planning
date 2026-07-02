@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-11-05T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 천안예술의전당
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294972
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-11-05T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294972_260701_100250.gif
-content_hash: sha256:a22bfedd4d71b63c5132a080b86c62103b9649866368ab8b1a385c3539713907
+content_hash: sha256:22d98c100ebd4c532079c87404dc5f681b3486919a23915263cee7b98bf61944
+x_lastSeen: '2026-07-03T04:18:59+09:00'
 ---
 
 # 지역 아티스트와 함께하는 K-클래식 콘서트7, 메즈클라리넷 [천안]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

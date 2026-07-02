@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-19T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 천안시성환문화회관
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294945
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-20T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294945_260630_114250.gif
-content_hash: sha256:92cdbfe579b5e8dafcab7673b3d588284621343274baaff7ea910776be721823
+content_hash: sha256:7149e7c0cec5580afbdba9d64f79e3b20bf926e3d3910a1ba89cd1afa3fdf328
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 최고다 호기심딱지 시즌4, 피사총사: 우리 몸은 우리가 지킨다! [천안]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

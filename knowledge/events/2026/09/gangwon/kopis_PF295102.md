@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-09-06T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 원주백운아트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF295102
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-09-06T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF295102_260702_114424.gif
-content_hash: sha256:acbd28c68be1dbf0ad9c76c60d5fd14a976fb4155c2661ce4757892ef9249900
+content_hash: sha256:ba4f5d685fcb505f834889485b364ccb8f399c7ce88c7a2b2ea9581c4004d7f9
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 조항조 전국투어 콘서트: 생각 [원주]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

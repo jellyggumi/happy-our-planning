@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-25T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 이화여자대학교 삼성홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294684
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-26T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294684_260626_113037.png
-content_hash: sha256:cfb7445f127ef599e43c22a600e50940d3411f84bf68ced387a405a07fd083ab
+content_hash: sha256:9f5dd96022b54348897cce83fbc878dca67611064f819df3a968145c74d4f5bc
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 김중연 콘서트, PERFORMER Vol.3: Variety
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

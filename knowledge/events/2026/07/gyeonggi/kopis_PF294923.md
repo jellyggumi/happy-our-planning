@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-07-18T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 우리소극장 [의정부]
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294923
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-18T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294923_260630_104753.jpg
-content_hash: sha256:a8ee84384e7e56ea8ebafc334e67831c9b7a3a4b78b69203ca9632b3e21c7b90
+content_hash: sha256:4342b8ccc4ce7d5eaccd530eeb0c8a0cedf0a0747199978e17469ca1e90a1d93
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 매직 쇼 타임 (Magic Show Time) [의정부]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

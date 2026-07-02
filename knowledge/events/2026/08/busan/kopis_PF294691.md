@@ -5,7 +5,7 @@ event_type: Event
 themes:
 - 공연
 start_date: '2026-08-01T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 초콜릿팩토리
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294691
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-08-01T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294691_260626_123852.png
-content_hash: sha256:411d33341cf2a70e6ecfdc20d91f479a96f0ca8b08c012eae0ea57cd628389f8
+content_hash: sha256:dd587e31f71a20ea68e18fd9944b2dfe3b69e2d09809e770997479c57102a076
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 매직랜드 하이라이트쇼 [부산]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

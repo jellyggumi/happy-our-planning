@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-11-07T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: KT&G 상상마당 라이브홀 [마포]
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294990
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-11-07T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294990_260701_103938.jpg
-content_hash: sha256:79983a030b4acf24822162a5e93681e4f3a52646671033cb3cde409980ef5ba5
+content_hash: sha256:a969bff8fa2cd5c1ef5ea9cdacff6d361a316cb3a8e8141109edbadaf76e13ac
+x_lastSeen: '2026-07-03T04:18:59+09:00'
 ---
 
 # Regallily Asia Tour: Dawn [서울]
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-

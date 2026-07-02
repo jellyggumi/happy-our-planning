@@ -5,7 +5,7 @@ event_type: MusicEvent
 themes:
 - 공연
 start_date: '2026-07-19T00:00:00+09:00'
-status: Scheduled
+status: archived
 attendance_mode: Offline
 location:
   name: 부산콘서트홀
@@ -19,10 +19,10 @@ source_url: https://www.kopis.or.kr/openApi/restful/pblprfr/PF294936
 fetched_at: '2026-07-02T23:14:22+09:00'
 end_date: '2026-07-19T23:59:59+09:00'
 image: http://www.kopis.or.kr/upload/pfmPoster/PF_PF294936_260630_111720.png
-content_hash: sha256:935ebbaf71925ed7caff78309f7815a36a9b2c024001a440da261519c2a60221
+content_hash: sha256:d3e55137bef0f28cd8037904e288a3f8fdaf621b77a8c6a2cb5c0e87fae7a3e9
+x_lastSeen: '2026-07-03T04:18:58+09:00'
 ---
 
 # 제48차 유네스코 세계유산위원회 부산총회 개최 기념, 부산시립교향악단 초청음악회: 홍석원 & 부산시립교향악단 with 김태한
 
 > 출처: kopis · 수집 2026-07-02T23:14:22+09:00
-
