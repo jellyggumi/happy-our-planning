@@ -1,7 +1,7 @@
 ---
 source: websearch
 date: 2026-11-10
-fetched: 2026-11-10T10:07:19+09:00
+fetched: 2026-11-11T07:46:18+09:00
 collected: 3
 created: 0
 updated: 0
